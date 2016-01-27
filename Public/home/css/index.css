@@ -1,0 +1,90 @@
+/* CSS Document */
+
+/**通用*/
+
+.mb10 { margin-bottom: 10px }
+.mb20 { margin-bottom: 20px }
+.clearMP { margin: 0; padding: 0; }
+
+/*快速导航*/
+.disease_ul { position: relative; display: block; z-index: 12; font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', sans-serif; }
+.disease_ul a { color: #484848; }
+.disease_ul a:hover { color: #F33; }
+.disease_ul .disease_tab_a { display: block; height: 46px; line-height: 46px; padding-left: 0px; font-size: 14px; font-weight: bolder; color: #fff; background: url(../images/disease_li_bg.png)145px 0 no-repeat #383838 }
+.alldisease_div .alldisease_div_ul li, .disease_ul div dd { height: 24px; line-height: 24px }
+.disease_ul .disease_tab_a:hover { text-decoration: none }
+.disease_ul li { display: block }
+.disease_ul li:hover .disease_tab_a { color: #383838; background-color: #efefef; background-position: 145px -46px; padding-left: 5px; }
+.disease_ul li>div { position: absolute; top: 0; left: 160px; width: 0; height: 368px; background: #efefef; overflow: hidden; z-index: 16 }
+.disease_ul div dl { float: left; display: block; width: 620px; height: 100%; overflow: hidden; padding-left: 30px }
+.alldisease_div { float: left; display: block; height: 100%; width: auto; padding-left: 20px }
+.alldisease_ul_con { height: 310px; width: auto }
+.disease_ul div .alldisease_div .dl_header { height: 46px; width: 100%; display: block }
+.dl_titles { width: 160px; overflow: hidden; display: block; float: left; margin-right: 6px; }
+.alldisease_div .alldisease_div_ul { float: left; display: block; height: 306px; width: 72px; overflow: hidden; padding-left: 5px }
+.disease_ul div dd { text-align: left; overflow: hidden }
+.disease_ul div dd.dl_more { margin: 10px 50px 0; float: right; }
+.disease_ul div dd.dl_more a { color: red }
+.disease_ul div .dl_header { font-size: 14px; font-weight: bolder; line-height: 46px; height: 46px; margin: 0 0 10px }
+.disease_ul div .dl_header span { border-bottom: 1px solid #ccc; height: 46px; }
+.disease_ul li:hover>div { width: 645px; height: 368px }
+.disease_ul li:hover i { background: url(../images/ico-menuh.png) no-repeat center; }
+.disease_ul li > a { cursor: pointer; transition: background 0.2s, padding-left 0.2s; -webkit-transition: background 0.2s, padding-left 0.2s; }
+.disease_ul li a i { display: inline-block; height: 25px; width: 25px; margin: 0 8px; background: url(../images/ico-menu.png) no-repeat center; vertical-align: middle; }
+.disease_ul li a i.icon-ppsj { background-position: 0 3px; }
+.disease_ul li a i.icon-pmsj { background-position: 2px -47px; }
+.disease_ul li a i.icon-zx { background-position: 1px -92px; }
+.disease_ul li a i.icon-wd { background-position: 1px -139px; }
+.disease_ul li a i.icon-wa { background-position: 0 -186px; }
+.disease_ul li a i.icon-wzkf { background-position: 0 -235px; }
+.disease_ul li a i.icon-rj { background-position: 1px -280px; }
+.disease_ul li a i.icon-dmyy { background-position: 1px -330px; }
+.quickMenu { height: 54px; background: #efefef; padding: 7px; }
+
+/*newsList*/
+.newsTitleList ul { list-style: none; margin: 5px 0; padding: 0; }
+.newsTitleList ul li { height: 30px; line-height: 30px; list-style-position: inside; list-style-type: square; color: #ccc; }
+.newsTitleList ul li a { font-size: 1.4rem }
+.indexHospital .am-slider { margin-top: 10px; }
+.newsTitleListR ul { margin-left: 0.1rem; list-style: none; padding-left: 0px; }
+.newsLeftIMG { height: 112px; overflow: hidden }
+.newsLeftIMG img { border: 1px solid #eee; margin: 5px 5px 5px 0; padding: 1px; width: 107px; height: 107px; }
+.newsLeftIMG h3 { margin: 0; padding-left: 5px; text-indent: 1em; margin-top: 15px; }
+.newsLeftIMG p { margin-top: 5px; font-size: 14px; height: 44px; overflow: hidden }
+
+/*专题tab*/
+.ztTab { height: 37px; overflow: hidden; }
+.ztTab li { display: block; height: 30px; background: url(../images/index_06.jpg); float: left; border-right: 1px solid #fff; padding: 0px; line-height: 14px; border-left: none; }
+.ztTab li.am-active, .ztTab li:hover { height: 37px; background: url(../images/index_07.jpg) center top; text-align: center; }
+.ztTab li a { font-size: 14px; color: #666; padding: 12px 16px; line-height: 8px; }
+.ztTab li.am-active a, .ztTab li:hover a { color: #fff; }
+.ztTab-bd { border: none; }
+#ztTab1 .ztList img { width: 58px; height: 41px; margin-right: 5px; }
+#ztTab1 .ztList p { color: #777; font-size: 13px; text-indent: 2em; margin: 5px 0; padding-top: 0; }
+#ztTab1 .ztList a { transition: color .6s ease-in-out; cursor: pointer; color: #666; }
+#ztTab1 .ztList h3 { font-size: 14px; font-weight: bold; margin-top: 0px; margin-bottom: 0; }
+#ztTab1 .ztList a:hover { color: red; text-decoration: none; }
+#ztTab1 .ztList hr { margin-top: 0.54rem }
+#ztTab1 .ztList .am-fr { margin-top: -0.9rem }
+#ztTab2 { padding-top: 0px; }
+#ztTab2 .newsTitleList ul li { list-style: none; }
+#ztTab2 .newsTitleList ul li:before { content: "-"; }
+#ztTab2 .newsTitleList ul li a { padding-left: 8px; }
+
+/*医库*/
+.data_list { clear: both; border-bottom: 1px dashed #ccc; padding: 10px 0; font-size: 14px; font-weight: 400; line-height: 24px; }
+.data_list h4 { width: 4.5rem; float: left; font-weight: 700; margin: 0 0 0 1rem; }
+.data_list ul { list-style: none; margin-top: 0; margin-left: 3rem; }
+.data_list ul li { float: left; padding-right: 10px; }
+.am-tab-panel .data_list:last-child { border: none; }
+
+/* --------科室tab------------------ */
+.roundedTab {}
+.roundedTab .am-tabs-nav { list-style: none; border-bottom: 1px solid #ddd; padding-left: 0; margin-bottom: 0; }
+.roundedTab .am-tabs-nav li { float: left; margin-bottom: -1px; padding-bottom: 5px; }
+.roundedTab .am-tabs-nav li a { font-weight: 600; margin-right: 5px; line-height: 1.6; padding: .4em 1em; }
+.roundedTab .am-tabs-nav li.am-active a, .roundedTab .am-tabs-nav li:hover a { border-bottom: 1px solid #0E90D2; }
+.rounded { border: none; }
+.rounded-list { padding: 0px; list-style: none; }
+.rounded-list li { width: 30%; float: left; padding-left: 0em; height: 30px; font-size: 14px; border-bottom: 1px dotted rgb(239, 239, 239); margin-right: 3%; }
+.rounded-list li a { color: #777; font-family: '微软雅黑', YaHei; font-size: 14px !important; }

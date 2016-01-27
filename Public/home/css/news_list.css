@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+.big_box { font: 12px/24px Microsoft YaHei, tahoma, arial, Simsun; color: #333; }
+.list_box { margin-top: 20px; }
+.list_left_top { border-bottom: 3px solid #e6e6e6; height: 36px; }
+.list_left_top a { color: #222; font-size: 18px; margin-right: 20px; }
+.list_left_top .currid { color: #3579a6; border-bottom: 3px solid #3579a6; padding-bottom: 9px; }
+.Event_one_left { width: 28%; }
+.Event_one_right { width: 71%; margin-left: 1%; }
+.Event_one_left img { width: 100%; }
+.Event_title a { font-size: 18px; font-weight: 600; word-wrap: break-word; cursor: pointer; color: #333333; overflow: hidden; display: inline-block; }
+.Event_one { padding: 20px 0; border-bottom: 1px dashed #ccc; }
+.Event_one:hover { background: #f8f8f8; border: 0; border-bottom: 1px solid #e6e6e6; color: #2E4E84; }
+.headportrait .name { color: #3da9f7; font-size: 14px; line-height: 24px; height: 24px; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+.headportrait .time { font-size: 12px; color: #aaa; line-height: 24px; height: 24px; overflow: hidden; text-overflow: ellipsis; text-align: left; font-family: "Arial"; margin-top: 3px; }
+.desc { font-size: 13px; color: #666666; line-height: 22px; height: 62px; overflow: hidden; width: 99%; }
+.WeChat_box { background-color: #edf2f8; }
+.Sweep { width: 100%; height: 40px; line-height: 40px; text-align: center; background: #0e90d2; color: #FFF; font-size: 16px; }
+.Sweep_img { text-align: center; margin: 20px 0; }
+.list_left { width: 68%; }
+.list_right { width: 30%; margin-left: 2%; }
+.Sweep_text { color: #666; margin-top: 1px; font-size: 13px; text-align: left; padding: 0 4px 15px 13px; }
+.Edit_title, .Hot_title { margin-top: 15px; font-size: 18px; color: #2E4E84; }
+.Edit_box, .Hot_box { padding-top: 10px; }
+.Edit_box a { line-height: 30px; height: 30px; color: #222; font-size: 14px; overflow: hidden; display: block; }
+.Hot_box a { line-height: 30px; height: 30px; color: #222; font-size: 14px; overflow: hidden; display: block; }
+.Hot_box a span { width: 22px; line-height: 20px; background-color: #ddd; color: white; display: inline-block; text-align: center; font-size: 10px; margin-right: 5px; border-radius: 2px; }
+.Hot_box a:nth-child(1) span { background-color: red; }
+.Hot_box a:nth-child(2) span { background-color: red; }
+.Hot_box a:nth-child(3) span { background-color: red; }
+.ul-fy li a { height: 35px; width: 35px; border-radius: 50%; text-align: center; padding: 9px 0px; }
+.AD_box{ margin:20px 0;border: 1px solid #d2e1f1;}

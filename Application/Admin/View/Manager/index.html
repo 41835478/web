@@ -1,0 +1,56 @@
+<div class="admin-main">
+<div class="panel dux-box">
+    <div class="table-responsive">
+        <table id="table" class="table table-hover ">
+            <tbody>
+                <tr>
+                    <th width="60">选择</th>
+                    <th width="*" align="left">用户名</th>
+                    <th width="120" align="left">昵称</th>
+                    <th width="*" align="left">邮箱</th>
+                    <th width="*">添加时间</th>
+                    <th width="70">状态</th>
+                    <th width="120">最后登录时间</th>
+                    <th width="100">操作</th>
+                </tr>
+                <foreach item="v" name="list">
+                <tr>
+                    <td align="center">
+                        <input type="checkbox" name="id[]" value="{$v.admin_id}" />
+                    </td>
+                    <td>{$v.admin_user}</td>
+                    <td>{$v.admin_name}</td>
+                    <td>{$v.admin_email}</td>
+                    <td align="center">{$v.admin_addtime|date='Y-m-d',###}</td>
+                    <td align="center">
+                        <if condition="$v.status eq 1"><span class="tag bg-green">已审核</span></if>
+                        <if condition="$v.status eq 0"><span class="tag bg-blue">被禁用</span></if>
+                    </td>
+                    <td align="center">{$v.admin_logintime|date='Y-m-d',###}</td>
+                    <td align="center">
+                        <a title="修改" href="{:U('edit',array('admin_id'=>$v['admin_id']))}" class="button bg-blue button-small icon-pencil"></a>
+                        <a title="删除" data="{$v.admin_id}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                    </td>
+                </tr>
+                </foreach>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-foot table-foot clearfix">
+        <div class="float-left">
+            <a class="button bg-blue button-small" id="selectAll" type="button">全选</a>
+            <a class="button bg-blue button-small" id="selectSubmit" type="submit">删除</a>
+        </div>
+        <div class="float-rights">{$pages}</div>
+    </div>
+</div>
+<script>
+    Do.ready('base', function () {
+        //表格处理
+        $('#table').duxTable({
+            actionUrl : "{:U('batchAction')}",
+            deleteUrl: "{:U('del')}",
+        });
+    });
+</script>
+</div>

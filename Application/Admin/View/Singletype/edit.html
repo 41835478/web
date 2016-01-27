@@ -1,0 +1,70 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>修改单页栏目</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label">
+                            <label>上级栏目</label>
+                        </div>
+                        <div class="field">
+							<select name="parent_id" id="parent_id" class="input">
+								 <option value="0">顶级分类</option>
+								<foreach item="v" name="list">
+								<if condition="$v['class_id'] eq $r['parent_id']">
+									<option value="{$v.class_id}" selected="selected">{$v.name}</option>
+								<else/>
+									<option value="{$v.class_id}">{$v.name}</option>
+								</if>
+								</foreach>
+							</select>
+                            <div class="input-note">当前栏目的上级栏目</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>栏目名称</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.name}" datatype="s" size="60" name="name" id="name" class="input">
+                        </div>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <div class="label">
+                            <label>栏目顺序</label>
+                        </div>
+                        <div class="field">
+                            <input type="number" value="{$r.sort}" datatype="n" size="60" name="sort" id="sort" class="input">
+                            <div class="input-note">栏目列表调用时的顺序，数字越小越靠前</div>
+                        </div>
+                    </div>
+                    
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <input type="hidden" value="{$r.class_id}" name="class_id">
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+        $('#form').duxFormPage();
+    });
+</script>
+</div>

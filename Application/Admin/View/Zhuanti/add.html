@@ -1,0 +1,91 @@
+<div class="admin-main"> 
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>添加专题</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>专题标题</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" datatype="*" size="60" name="title" id="title" class="input">
+                            <div class="input-note">文章标题请不要填写特殊字符</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>形象图</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" class="input" id="image" name="image" size="38" value="">
+                            <a class="button bg-blue button-small  js-img-upload" data="image" id="image_upload" preview="image_preview" href="javascript:;" ><span class="icon-upload"> 上传</span></a>
+                            <a class="button bg-blue button-small icon-picture-o" id="image_preview" href="javascript:;" > 预览</a>
+                        </div>
+                    </div>
+                                        
+                    <div class="form-group">
+                        <div class="label">
+                            <label>专题关键字</label>
+                        </div>
+                        <div class="field">
+                            <textarea cols="62" rows="3" name="keywords" id="keywords" class="input"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>专题描述</label>
+                        </div>
+                        <div class="field">
+                            <textarea cols="62" rows="3" name="description" id="description" class="input"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>专题名字</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" size="60" name="url" id="url" class="input">
+                            <div class="input-note">设置后访问内容会跳转</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label"><label>显示：</label></div>
+                        <div class="field button-group button-group-small radio">
+                            <label class="button"><input type="radio" value="1" name="isview">
+                            <span class="icon icon-check"></span> 启用</label>
+                            <label class="button"><input type="radio" value="0" name="isview">
+                            <span class="icon icon-times"></span> 禁用</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+  //var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+    }); 
+</script>
+</div>

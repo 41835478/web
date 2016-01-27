@@ -1,0 +1,43 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="panel dux-box  active">
+        <div class="panel-head">
+            <strong>微信接口配置</strong>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="label">
+                    <label for="sitename">微信AppID：</label>
+                </div>
+                <div class="field">
+                    <input type="text" datatype="*" value="{$db_config.AppID}" size="60" name="config[AppID]" id="site_subtitle" class="input">
+                    <div class="input-note"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label for="sitename">微信AppSecret：</label>
+                </div>
+                <div class="field">
+                    <input type="text" datatype="*" value="{$db_config.AppSecret}" size="60" name="config[AppSecret]" id="site_subtitle1" class="input">
+                    <div class="input-note"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-foot">
+            <div class="form-button">
+                <div id="tips"></div>
+                <input type="hidden" class="form-control input" name="id" value="5" >
+                <button type="submit" class="button bg-main">保存</button>
+                <button type="reset" class="button bg">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+        $('#form').duxForm();
+    });
+</script>
+</div>

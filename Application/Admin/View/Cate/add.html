@@ -1,0 +1,110 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>添加文章栏目</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label">
+                            <label>上级栏目</label>
+                        </div>
+                        <div class="field">
+                            <select name="parent_id" class="input">
+                                <option value="0">==顶级栏目==</option>
+                                <foreach name="list" item="v">
+				                    <option value="{$v.class_id}">{$v.name}</option>
+								</foreach>
+                            </select>
+                            <div class="input-note">当前栏目的上级栏目</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>栏目名称</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" datatype="s" size="60" name="name" id="name" class="input">
+                        </div>
+                    </div>
+
+ 					<div class="form-group">
+                        <div class="label">
+                            <label>子标题</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" size="60" name="subname" id="subname" class="input">
+                            <div class="input-note">扩展标题的副标题信息</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>栏目属性</label>
+                        </div>
+                        <div class="field">
+                           <div class="button-group button-group-small radio">
+                                    <label class="button"><input type="radio" value="0" name="type">
+                                    <span class="icon icon-check"></span> 频道</label>
+                                    <label class="button active"><input type="radio" value="1" checked="checked" name="type">
+                                    <span class="icon icon-check"></span> 列表</label>
+                                </div>
+                                <div class="input-note">频道页不能发布只能调用下级栏目内容</div>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>栏目顺序</label>
+                        </div>
+                        <div class="field">
+                            <input type="number" value="1" datatype="n" size="60" name="sequence" id="sequence" class="input">
+                            <div class="input-note">栏目列表调用时的顺序，数字越小越靠前</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>栏目关键词</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" size="60" name="keywords" id="keywords" class="input">
+                            <div class="input-note">当前栏目的关键词</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="sitename">栏目描述</label>
+                        </div>
+                        <div class="field">
+                            <textarea cols="62" rows="3" name="description" id="description" class="input"></textarea>
+                            <div class="input-note">当前栏目的描述信息</div>
+                        </div>
+                    </div>
+                    
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <input type="hidden" value="" name="class_id">
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+        $('#form').duxFormPage();
+    });
+</script>
+    </div>

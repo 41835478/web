@@ -1,0 +1,186 @@
+<style>
+    .media-x .txt:before{    line-height: 80px;}
+</style>
+<div class="admin-main">
+    <!--[if lte IE 8]>
+<script src="/public/js/chart/excanvas.compiled.js"></script>
+<![endif]-->
+<div class="line-big">
+    <div class="xm12">
+        <div class="alert alert-yellow"><strong>提示：</strong>尊敬的&nbsp;&nbsp;{$__ADMIN__.username}&nbsp;,&nbsp;欢迎您的使用，您的本次登录时间为 <php>echo  date('y-m-d h:i:s',time());</php> ，登录IP为<php>echo  $_SERVER['REMOTE_ADDR'];</php></div>
+    </div>
+</div>
+<div class="line-big">
+    <div class="xm3">
+        <div class="panel dux-box dux-dashboard">
+            <div class="clearfix">
+                <div class="media media-x ">
+                    <div class="float-left">
+                        <div class="txt dashboard-head radius-small bg-red  icon-dashboard"></div>
+                    </div>
+                    <div class="media-body text-center">
+                        <h2><strong>40%</strong></h2>
+                        安全检测
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="xm3">
+        <div class="panel dux-box dux-dashboard">
+            <div class="clearfix">
+                <div class="media media-x ">
+                    <div class="float-left">
+                        <div class="txt dashboard-head radius-small bg-yellow icon-bar-chart-o"></div>
+                    </div>
+                    <div class="media-body text-center">
+                        <h2><strong>34</strong></h2>
+                        今日网站访问
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="xm3">
+        <div class="panel dux-box dux-dashboard">
+            <div class="clearfix">
+                <div class="media media-x ">
+                    <div class="float-left">
+                        <div class="txt dashboard-head radius-small bg-blue icon-paw"></div>
+                    </div>
+                    <div class="media-body text-center">
+                        <h2><strong>0</strong></h2>
+                        今日蜘蛛访问
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="xm3">
+        <div class="panel dux-box dux-dashboard">
+            <div class="clearfix">
+                <div class="media media-x ">
+                    <div class="float-left">
+                        <div class="txt dashboard-head radius-small bg-green icon-puzzle-piece"></div>
+                    </div>
+                    <div class="media-body text-center">
+                        <h2><strong>0</strong></h2>
+                        碎片使用数量
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div class="line-big">
+    <div class="xm12">
+        <div class="panel dux-box">
+            <div class="panel-head">网站近期访问概况</div>
+            <div class="panel-body">
+                <div style="height:200px;">
+                    <canvas id="chart" style="width: 1651px; height: 200px;" height="200" width="1651"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="line-big">
+    <div class="xm6">
+        <div class="panel dux-box">
+            <div class="panel-head"><strong>系统信息</strong>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td width="100" align="right">当前IP：</td>
+                            <td><php>echo  $_SERVER['REMOTE_ADDR'];</php></td>
+                        </tr>
+                        <tr>
+                            <td align="right">网址：</td>
+                            <td><php>echo  $_SERVER['SERVER_NAME'];</php> </td>
+                        </tr>
+                        <tr>
+                            <td align="right">服务器时间：</td>
+                            <td><php>echo  date('y-m-d h:i:s',time());</php> </td>
+
+                        </tr>
+                        <tr>
+                            <td align="right">PHP版本：</td>
+                            <td><php>echo PHP_VERSION;</php></td>
+                        </tr>
+                        <tr>
+                            <td align="right">物理路径：</td>
+                            <td><php>echo $_SERVER['DOCUMENT_ROOT'];</php></td>
+                        </tr>
+                        <tr>
+                            <td align="right">系统类型：</td>
+                            <td><php>echo  php_uname('s');</php>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">服务器引擎：</td>
+                            <td><php>echo   $_SERVER['SERVER_SOFTWARE'];</php></td>
+
+                        </tr>
+
+                        <tr>
+                            <td align="right">Thinkphp：</td>
+                            <td>{$Think.THINK_VERSION}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="xm6">
+            <div class="panel dux-box">
+                <div class="panel-head"><strong>蜘蛛访问</strong>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th align="center">时间</th>
+                                <th align="center"><a href="https://www.baidu.com/s?wd=site%3Afuzhen.com" target="_blank">百度</a></th>
+                                <th align="center">Google</th>                                  
+                                <th align="center">sogou</th>
+                                <th align="center">soso</th>
+                                <th align="center"><a href="http://www.haosou.com/s?ie=utf-8&shb=1&src=sug-local&q=site%3Afuzhen.com" target="_blank">360</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <foreach name='bot' item='bot'>
+                                <tr>
+                                    <td align="center">{$bot.time|friendly_date=###,"ymd"}</td>
+                                    <td align="center">{$bot.baidu}</td>
+                                    <td align="center">{$bot.google}</td>
+                                    <td align="center">{$bot.sogou}</td>
+                                    <td align="center">{$bot.soso}</td>
+                                    <td align="center">{$bot.360spider}</td>
+                                </tr>
+                            </foreach> 
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        Do.ready('base', function () {
+            var data = {$chartArray};
+            $("#chart").duxChart({
+                data: data
+            });
+        });
+    </script>
+</div>

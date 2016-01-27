@@ -1,0 +1,137 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>站点信息</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">网站设置</a></li>
+                        <li><a href="#tab-2">网站信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label"><label>站点标题：</label></div>
+                        <div class="field">
+                        <input type="text" class="input input_big" value="{$config.c_title}" datatype="*" name="c_title" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>站点关键词：</label></div>
+                        <div class="field">
+                        <input type="text" class="input input_big" value="{$config.c_keyword}" name="c_keyword" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>站点描述：</label></div>
+                        <div class="field">
+                        <textarea class="input" name="c_desc" id="c_desc" cols="62" rows="3">{$config.c_desc}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>开启会员功能：</label></div>
+                        <div class="field button-group button-group-small radio">
+                        <if condition="$config['c_user'] eq 1">
+                            <label class="button active"><input type="radio" value="1" name="c_user" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="1" name="c_user">
+                        </if>
+                            <span class="icon icon-check"></span> 启用</label>
+                        <if condition="$config['c_user'] eq 0">
+                            <label class="button active"><input type="radio" value="0" name="c_user" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="0" name="c_user">
+                        </if>
+                            <span class="icon icon-times"></span> 禁用</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>禁用词语：</label></div>
+                        <div class="field"><textarea class="input" name="c_Nword" id="c_Nword" cols="55" rows="3">{$config.c_Nword}</textarea></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>网站状态：</label></div>
+                        <div class="field button-group button-group-small radio">
+                        <if condition="$config['c_isoff'] eq 1">
+                            <label class="button active"><input type="radio" value="1" name="c_isoff" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="1" name="c_isoff">
+                        </if>
+                            <span class="icon icon-check"></span> 启用</label>
+                        <if condition="$config['c_isoff'] eq 0">
+                            <label class="button active"><input type="radio" value="0" name="c_isoff" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="0" name="c_isoff">
+                        </if>
+                            <span class="icon icon-times"></span> 禁用</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>故障描述：</label></div>
+                        <div class="field">
+	                	<textarea class="input" name="c_offdesc" id="c_offdesc" cols="55" rows="3">{$config.c_offdesc}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-panel">
+
+                    <div class="form-group">
+                        <div class="label"><label>站点网址：</label></div>
+                        <input type="text" class="input input_big" name="c_weburl" size="60" value="{$config.c_weburl}" />
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>站长邮箱：</label></div>
+                        <div class="field">
+                        <input type="text" class="input input_big" datatype="e" size="60"  name="c_email" value="{$config.c_email}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>联系电话：</label></div>
+                        <div class="field">
+                        <input type="text" class="input input_small" name="c_tel" size="60" value="{$config.c_tel}" />
+                        </div>
+                    </div>                 
+                    <div class="form-group">
+                        <div class="label"><label>联系地址：</label></div>
+                        <div class="field">
+                        <input type="text" class="input"  name="c_address" size="60" value="{$config.c_address}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>站点版权：</label></div>
+                        <div class="field">
+                        <input type="text" class="input" name="c_copy" size="60" value="{$config.c_copy}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>备案编号：</label></div>
+                        <div class="field">
+                        <input type="text" class="input input_small" name="c_icp" size="60" value="{$config.c_icp}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>站点统计：</label></div>
+                        <div class="field">
+                        <textarea class="input" name="c_tongji" id="c_tongji" cols="62" rows="3">{$config.c_tongji}</textarea>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+       $('#form').duxFormPage();
+    });
+</script>
+</div>

@@ -1,0 +1,148 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+		    <div class="tab-body">
+				<div class="tab-panel active">
+				    <div class="form-group">
+	                <div class="label"><label>开启支付：</label></div>
+	                <div class="field">
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][0] eq Alipay">
+						<input type="checkbox" name="config[type][]" value="Alipay" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Alipay" >
+						</if>
+						支付宝</label>
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][1] eq Tenpay">
+						<input type="checkbox" name="config[type][]" value="Tenpay" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Tenpay" >
+						</if>
+						财付通</label>
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][2] eq Kuaiqian">
+						<input type="checkbox" name="config[type][]" value="Kuaiqian" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Kuaiqian" >
+						</if>
+						快钱</label>
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][3] eq Unionpay">
+						<input type="checkbox" name="config[type][]" value="Unionpay" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Unionpay" >
+						</if>
+						银联</label>
+	                </div>
+					</div>
+		    	</div>
+			</div>
+		</div>
+	</div>
+	<br />
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>插件信息设置</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">支付宝配置</a></li>
+                        <li><a href="#tab-2">财付通配置</a></li>
+                        <li><a href="#tab-3">块钱配置</a></li>
+                        <li><a href="#tab-4">银联配置</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label"><label>收款账号邮箱：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.AlipayEmail}" size="60" name="config[AlipayEmail]" id="title" class="input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>加密key：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.AlipayKey}" size="60" name="config[AlipayKey]" id="title" class="input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>合作者ID：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.AlipayPartner}" size="60" name="config[AlipayPartner]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://open.weixin.qq.com/）</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="tab-2" class="tab-panel">
+                    <div class="form-group">
+                        <div class="label"><label>加密key：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.TenpayKey}" datatype="*" size="60" name="config[TenpayKey]" id="title" class="input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>合作者ID：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.TenpayPartner}" datatype="*" size="60" name="config[TenpayPartner]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://connect.qq.com）</div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div id="tab-3" class="tab-panel">  
+                    <div class="form-group">
+                        <div class="label"><label>块钱Key：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.KuaiqianKey}" datatype="*" size="60" name="config[KuaiqianKey]" id="title" class="input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>块钱ID：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.KuaiqianPartner}" datatype="*" size="60" name="config[KuaiqianPartner]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://open.weibo.com/）</div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div id="tab-4" class="tab-panel">
+                    <div class="form-group">
+                        <div class="label"><label>银联Key：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.UnionpayKey}" datatype="*" size="60" name="config[UnionpayKey]" id="title" class="input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>银联ID：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.UnionpayPartner}" datatype="*" size="60" name="config[UnionpayPartner]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://dev.renren.com/）</div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <input type="hidden" class="form-control input" name="id" value="6" >
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+	//var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        //$('#form').duxFormPage();
+    }); 
+</script>
+    </div>

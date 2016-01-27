@@ -1,0 +1,65 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>添加路由规则</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>路由名称：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" datatype="*" size="60" name="title" id="title" class="input">
+                            <div class="input-note">页面板块的路由名称</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>实际地址：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" datatype="*" size="60" name="sjurl" id="sjurl" class="input">
+                            <div class="input-note">实际的URL地址</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>路由规则：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" size="60" name="lyurl" id="lyurl" class="input">
+                            <div class="input-note">路由的正则表达式</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+  //var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+    }); 
+</script>
+</div>

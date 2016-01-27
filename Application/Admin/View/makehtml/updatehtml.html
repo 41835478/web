@@ -1,0 +1,59 @@
+<hr />
+<blockquote class="quote border-green doc-quote"> <strong>完成进度：</strong>
+	<div class="progress progress-striped active"  style="width: 50%; margin:0 auto;">
+		<div class="progress-bar bg-sub" style="width:0%; color:grey;" id="myProgress"><span>0</span>%</div>
+	</div>
+	<p id="re" style="text-align: center; margin: 10px; " data='1'>更新中。。。</p>
+</blockquote>
+
+<hr />      
+<div class="panel">
+	<div class="panel-head">生成医生静态页：</div>
+	<div class="panel-body">
+		<div class="view-body" id="msgBox" style="height: 400px; overflow-y: scroll;">			
+			<ul class="list-group list-striped " id="msgUl">
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var n=0;
+	$.ajaxSetup ({ cache: false });
+	function reloads(n) {
+		var url = "{:U('updateHtml',array('type'=>$type))}";
+		$.ajax({
+			type: "POST",       
+			url: url,
+			data: "n="+$("#re").attr("data"),
+			dataType: 'json',
+			beforeSend:function(){
+			},                                               
+			success: function(msg){
+				if(msg.n=='999999'){
+					$("#myProgress").css("width","100%");
+					$("#re").html('<a href="index">更新完成！点击回到目录页！</a>');
+					///setTimeout('gonext()',5000);
+				}
+				if(msg.n){
+					$("#re").attr('data',msg.n);
+					$('#msgUl').append(msg.msg); 
+					$('#msgBox').scrollTop($("#msgUl")[0].offsetHeight);
+					$("#myProgress").css("width",msg.speed+"%");
+					$("#myProgress span").text(msg.speed);
+					reloads(msg.n); 
+				}else{
+                    $("#myProgress").css("width","0%");
+					$("#myProgress span").text('更新发生错误！');
+                    alert('无法更新文件，请联系管理员！');
+                    //alert(msg.msg);
+                }            
+            }
+        });
+	}
+	function gonext(){
+		window.location.href="{:U('index')}";
+	}
+	$(document).ready(function(){		
+		reloads(n);
+	})
+</script> 

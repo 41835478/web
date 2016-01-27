@@ -1,0 +1,63 @@
+<div class="admin-main">
+<form method="post" id="sortForm" action="{:U('sort')}">
+        <div class="panel dux-box">
+            <div class="table-responsive">
+                <table class="table table-hover " id="table">
+                    <tbody>
+                        <tr>
+                            <th width="100">编号</th>
+                            <th width="200">名称</th>
+                            <th width="50">排序</th>
+                            <th width="160">操作</th>
+                            <th width="*"> </th>
+                        </tr>
+
+                        <foreach name="list" item="v">
+                            <tr>
+                                <td align="center">{$v.class_id}</td>
+                                <td><a  href="{:U('Admin/single/article',array('id'=>$v['class_id']))}">{$v.name}</a></td>                               
+                                <td align="center"><input type="text" value="{$v.sort}" datatype="*"  name="sort[{$v.class_id}]" id="sort" class="input"></td>
+                                <td align="center">
+                                    <a title="修改" href="{:U('edit',array('id'=>$v['class_id']))}" class="button bg-blue button-small icon-pencil"></a>
+                                     <a title="删除" data="{$v.class_id}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                                </td>
+                            </tr>
+                            <foreach item ="k" name="v['class']">
+                                <tr>
+                                    <td align="center">{$k.class_id}</td>
+                                    <td><a  href="{:U('Admin/single/article',array('id'=>$k['class_id']))}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;{$k.name}</a></td>                                    
+                                    <td align="center"><input type="text" value="{$k.sort}" datatype="*"  name="sort[{$k.class_id}]" id="sort" class="input"></td>
+                                    <td align="center">
+                                        <a title="修改" href="{:U('edit',array('id'=>$k['class_id']))}" class="button bg-blue button-small icon-pencil"></a>               
+                                        <a title="删除" data="{$k['class_id']}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                                    </td>
+                                    <td> </td>
+                                </tr>
+                            </foreach>
+                        </foreach>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel-foot table-foot clearfix">
+            <div class="float-right">
+             <a type="submit" id="sortSubmit" class="button bg-blue button-small">更新排序</a>           
+         </div>
+     </div>
+ </div>
+</form>
+</div>
+<script>
+    Do.ready('base', function () {
+     $('#table').duxTable({
+        deleteUrl: "{:U('del')}",  
+     });
+ });
+    $(function(){
+        $("#sortSubmit").click(function(){
+            $("#sortForm").submit();
+        });
+    });
+</script>
+</div>

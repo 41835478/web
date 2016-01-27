@@ -1,0 +1,81 @@
+<div class="admin-main"> 
+<div class="panel dux-box">
+	<div class="table-responsive">
+        <table id="table" class="table table-hover ">
+            <tbody>
+                <tr>
+                    <th width="80">选择</th>
+                    <th width="80">编号</th>
+                    <th width="200">操作</th>
+                    <th width="300" align="left">名称</th>
+                    <th width="*" align="left">链接地址</th>
+                    <th width="*" align="left">显示</th>
+           	        <th width="*">排序</th>
+              </tr>
+                <foreach item="v" name="lists">
+                <tr>
+                  <td align="center">
+                      <input type="checkbox" name="id[]" value="{$v.id}" />
+                  </td>
+                  <td align="center">{$v.id}</td>
+                  <td align="center">
+                      <a class="button bg-blue tag" href="{:U('Add',array('id'=>$v['id']))}" title="添加子栏目">添加子栏目</a>
+                      <a title="修改" href="{:U('edit',array('id'=>$v['id']))}" class="button bg-blue button-small icon-pencil"></a>
+                      <a title="删除" data="{$v.id}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                  </td>
+                  <td><a href="{:U('edit',array('id'=>$v['id']))}">{$v.name|mb_substr=0,58}</a></td>
+                  <td>{$v.url}</td>
+                  <td>
+                    <if condition="$v['isview'] eq 0">
+                      <span class="tag bg-red">隐藏</span>
+                    <else />
+                      <span class="tag bg-green">显示</span>
+                    </if>
+                  </td>
+                  <td align="center">{$v.orders}</td>
+                </tr>
+
+                  <foreach item ="k" name="v['class']">
+                <tr>
+                  <td align="center">
+                      <input type="checkbox" name="id[]" value="{$k.id}" />
+                  </td>
+                  <td align="center">{$k.id}</td>
+                  <td align="center">
+                      <a title="修改" href="{:U('edit',array('id'=>$k['id']))}" class="button bg-blue button-small icon-pencil"></a>
+                      <a title="删除" data="{$k.id}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                  </td>
+                  <td><a href="{:U('edit',array('id'=>$k['id']))}">&nbsp;&nbsp;&nbsp;├─&nbsp;{$k.name|mb_substr=0,58}</a></td>
+                  <td>{$k.url}</td>
+                  <td>
+                    <if condition="$k['isview'] eq 0">
+                      <span class="tag bg-red">隐藏</span>
+                    <else />
+                      <span class="tag bg-green">显示</span>
+                    </if>
+                  </td>
+                  <td align="center">{$k.orders}</td>
+                </tr>
+                  </foreach>
+
+                </foreach>
+            </tbody>
+        </table>
+</div>
+    <div class="panel-foot table-foot clearfix">
+        <div class="float-left">
+            <a class="button bg-blue button-small" id="selectAll" type="button">全选</a>
+            <a class="button bg-blue button-small" id="selectSubmit" type="submit">删除</a>
+        </div>
+        <div class="float-page">{$pages}</div>
+    </div>
+</div>
+<script>
+Do.ready('base',function() {
+    $('#table').duxTable({
+      actionUrl : "{:U('batchAction')}",
+      deleteUrl: "{:U('del')}",
+    });
+});
+</script>
+</div>

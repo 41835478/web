@@ -1,0 +1,102 @@
+.illness_top { height: 50px; line-height: 50px; font-size: 16px; font-weight: 600; color: #fff; background: #68a6f4; padding: 0 19px; }
+.illness { margin: 0.5rem 0; }
+.illness_miannav a { padding: 0; line-height: 28px; height: 28px; }
+.illness .am-accordion-item { margin: 0; }
+.illness .am-accordion-title { border-bottom: none; }
+.illness .am-active .am-accordion-title { border-bottom: 1px solid #dedede; }
+.illness .am-accordion-item:last-child { border-bottom: 1px solid #dedede; }
+.dise_list { clear: both; }
+.dise_list_title { height: 40px; vertical-align: top; text-align: right; position: relative; overflow: hidden; }
+.dise_list_title p { float: left; font-size: 16px; color: #666; height: 36px; text-align: left; background: url(../images/sj2Icon.jpg) no-repeat center 27px; }
+.dise_list_title p span { color: #f60; }
+.dise_list_title em { display: block; position: absolute; left: 0; top: 33px; width: 100%; z-index: -1; height: 2px; background: #e6e6e6; overflow: hidden; }
+.dise_list01 { padding: 5px 0; overflow: hidden; zoom: 1; font-family: "宋体"; }
+.dise_list01 li { height: 28px; line-height: 28px; background: url(../images/point01.gif) no-repeat 0 12px; overflow: hidden; font-size: 14px; }
+.dise_list01 li span { font-size: 12px; color: #999; margin: 0 0 0 7px; }
+.dise_list01 li span em { font-style: normal; text-decoration: underline; }
+.dise_list02 { padding: 5px 0; overflow: hidden; zoom: 1; font-family: "宋体"; }
+.dise_list02 li { height: 28px; line-height: 28px; overflow: hidden; background: url(../images/point01.gif) no-repeat 0 12px; font-size: 14px; }
+.dise_list_title p { margin-top: 0; }
+.dise_list01 li:last-child { float: left; }
+.dise_list02 li:last-child { float: left; }
+.dise_list02 li a:hover { color: #ca0000; text-decoration: underline; }
+.dise_list01 li a:hover { color: #ca0000; text-decoration: underline; }
+.pageStyle { text-align: center; }
+.pageStyle p a { border: #e4e4e4 1px solid; background: #fff; padding: .5em 1em; line-height: 1.2; color: #555; margin-right: 10px; text-decoration: none; font-size: 14px; }
+.pageStyle p a:hover, .pageStyle p a:active { border: #0086cb 1px solid; color: #fff; background: #0086cb; }
+.pageStyle span.current { border: #0086cb 1px solid; padding: .5em 1em; line-height: 1.2; color: #fff; margin-right: 10px; background-color: #0086cb; font-size: 14px; }
+.curr { font-weight: bold; color: #f60; }
+.curr:hover { font-weight: bold; color: #f60; }
+.illness_name a:hover { color: #ca0000; text-decoration: underline; }
+/**/
+.illness_main { font-size: 28px; color: #06c; padding: 10px 0 6px; line-height: 40px; border-bottom: #EDEDED 1px solid; font-weight: bold; color: #333; width: 99%; }
+.illness_main span { font-size: 20px; color: #999; padding: 11px 0 0; font-weight: normal; }
+.Diseasedescription { text-indent: 2em; color: #666; line-height: 30px; height: 120px; overflow: hidden; text-overflow: ellipsis; font-size: 14px; width: 98%; margin: 10px 0; }
+.information { margin: 20px 0; }
+/**/
+.relateddiseases { font-size: 22px; line-height: 26px; font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Arial, sans-serif; margin: 20px 0 10px 0; }
+/**/
+.relateddiseases_boss a:last-child { float: left !important; }
+.relateddiseases_boss a { padding: 0; line-height: 34px; }
+.renewal { margin-bottom: 10px; }
+.renewal_one { padding: 0; }
+.renewal_one img { width: 96%; position: relative; }
+.renewal_one span { width: 96%; position: absolute; left: 0; bottom: 0; display: block; height: 24px; line-height: 24px; overflow: hidden; font-size: 12px; text-align: center; color: #fff; cursor: pointer; background: #000; opacity: 0.5; }
+.every_am-list { padding: 0 7px; }
+.every_am-list>li { border: none; }
+.every_am-list>li>span { top: 0.7rem; }
+.every_am-list>li>a { padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 12px; background: url(../images/point01.gif) no-repeat 0 15px; font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Arial, sans-serif; font-size: 14px; color: #333; }
+.every_am-list .am-list-item-dated a { padding-right: 130px; }
+.overall_box { background: #f5f5f9; padding: 20px 0; margin: 20px 0; }
+.overall { }
+.overall_one { font-size: 20px; line-height: 30px; font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Arial, sans-serif; color: #333; border-bottom: #EDEDED 3px solid; padding: 0 4px 10px 0; margin: 10px 0; width: 99%; }
+.overall_one span { color: #f60; }
+/*氨空间*/
+.title_top span { display: block; text-align: center; }
+.title_top_one { text-align: center; margin: 0 0 0px; font-size: 30px; color: #000; line-height: 54px; font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif; }
+.title_top_two { font-size: 24px; color: #999; line-height: 48px; display: block; }
+.title_top_three { background-color: #fff; border-radius: 4px; overflow: hidden; text-align: center; width: 21%; margin: 20px 2%; padding: 30px 16px; }
+.title_img { width: 90px; height: 90px; text-align: center; display: block; margin: auto; line-height: 90px; }
+.title_name { display: block; font-size: 18px; line-height: 45px; }
+.title_nav { display: block; color: #1f252a; line-height: 26px; font-size: 13px; }
+/**/
+.illnessdetails { margin: 20px 0; }
+.illnessdetails_one { padding: 0 2px; border-top: #EBEBEB 1px dashed; line-height: 35px; width: 99%; }
+.illnessdetails_one div span { color: #999; font-size: 13px; }
+.illnessdetails_one div a { color: #006699; font-size: 13px; }
+.illnessdetails_one div a:hover { color: #F60; text-decoration: underline; }
+.illnessdetails_one div { padding: 0; }
+.illnessdetails_one:first-child { border: none; }
+.illnessdetails_two { padding: 0; margin: 20px 0; }
+.illnessdetails_two div { padding: 0; line-height: 35px; }
+.ill_two { border-bottom: #EBEBEB 1px dashed; margin-bottom: 10px; }
+.ill_three { color: #006699; font-size: 16px; }
+.ill_three:hover { color: #F60; text-decoration: underline; }
+.ill_three_left span { color: #999; font-size: 13px; }
+.ill_three_left a { color: #006699; font-size: 13px; margin: 0 3px; }
+.ill_three_left a:hover { color: #F60; text-decoration: underline; }
+.ill_three_right span { color: #999; font-size: 13px; }
+.ill_three_right a { color: #006699; font-size: 13px; margin: 0 3px; }
+.ill_three_right a:hover { color: #F60; text-decoration: underline; }
+/**/
+.hosptial { font-size: 14px; line-height: 26px; }
+.hosptial a:hover { color: #F60; text-decoration: underline; }
+.hosptial_one i { padding-right: 5px; color: #ffc000; text-align: center; }
+/**/ 
+.relateddiseases_one { font-size: 14px; }
+.relateddiseases_one:hover { color: #F60; text-decoration: underline; }
+/**/
+.text_nav_left { height: 33px; line-height: 33px; padding-left: 12px; background: url(../images/point01.gif) no-repeat 0 15px; color: #333; font-size: 14px; padding-right: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.text_nav_left:hover { color: #F60; text-decoration: underline; cursor:pointer; }
+.text_nav_right { text-align: right; font-size: 12px; color: #999; height: 33px; line-height: 33px; }
+/*多余的*/
+.comprehensive { font-size: 22px; line-height: 26px; }
+.overall_text { margin-top: 30px; }
+.overall_text_title { font-weight: normal; font-size: 18px; line-height: 25px; margin-bottom: 10px; }
+.overall_text_one { color: #333; height: 28px; line-height: 28px; font-size: 14px; font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Arial, sans-serif; }
+.more_text { color: #333; height: 28px; line-height: 28px; font-size: 14px; font-family: "Microsoft YaHei", 微软雅黑, Tahoma, Arial, sans-serif; }
+.more_text span { color: #f60; margin: 0 2px; }
+.overall_text_one:hover{color: #F60; text-decoration: underline; cursor:pointer;}
+.more_text:hover{color: #F60; text-decoration: underline;cursor:pointer;}
+.right_more>li{ background-color:#f5f5f9;}
+.right_hanzhe{ margin:0;}

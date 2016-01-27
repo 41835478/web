@@ -1,0 +1,104 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>留言</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active"> 
+                <div class="form-group">
+                        <div class="label">
+                            <label>留言内容</label>
+                        </div>
+                        <div class="field"><textarea class="input js-editor" id="content" name="content" rows="9" >{$r.content}</textarea></div>
+                    </div>                   
+                    <div class="form-group">
+                        <div class="label">
+                            <label>用户昵称</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.username}" datatype="*" size="60" name="username" id="username" class="input">
+                        </div>
+                    </div>
+                                
+                    <div class="form-group">
+                        <div class="label">
+                            <label>邮箱</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.email}" size="60" name="email" id="email" class="input">                            
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>电话</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.tel}" size="60" name="tel" id="tel" class="input">                            
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>ip</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.ip}" size="60" name="ip" id="ip" class="input">                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>审核状态：</label>
+                </div>
+                <div class="field">
+                    <div class="button-group button-group-small radio">
+                        <if condition="$r['status'] eq 1">
+                            <label class="button active"><input type="radio" value="1" name="status" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="1" name="status">
+                        </if>
+                        <span class="icon icon-check"></span> 通过</label>
+
+                        <if condition="$r['status'] eq 2">
+                            <label class="button active"><input type="radio" value="0" name="status" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="2" name="status">
+                        </if>
+                        <span class="icon icon-times"></span> 禁用</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <input type="hidden" value="{$r.id}" name="id">
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+  //var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+
+    }); 
+</script>
+</div>

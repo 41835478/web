@@ -1,0 +1,125 @@
+
+<div class="admin-main">
+	<form action="" id="form" class="form-x dux-form form-auto" method="post">
+		<div class="panel ">
+			<div class="panel-head">
+				<strong>百度结构化插件</strong>
+			</div>
+			<div class="panel-body">
+				
+				<div class="form-group">
+					<div class="label">
+						<label>Api接口：</label>
+					</div>
+					<div class="field">
+						<input type="text" value="{$bd.data}"  size="50" name="baidu_api" id="baidu_api" class="input">
+						<button type="submit" class="button bg button-small">修改</button>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label>新闻：</label>
+					</div>
+					<div class="field" style="padding: 7px 7px 7px 0;">
+						<label>共{$news}条&nbsp;&nbsp;<span class="tag bg-sub">已推送{$updateNews}条</span></label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label>医院：</label>
+					</div>
+					<div class="field" style="padding: 7px 7px 7px 0;">
+						<label>共{$hospital}条&nbsp;&nbsp;<span class="tag bg-sub">已推送{$updateHospital}条</span></label>
+					</div>
+				</div>
+<!-- 
+				<div class="form-group">
+					<div class="label">
+						<label>独立页面提交：</label>
+					</div>
+					<div class="field">
+						<textarea class="input" rows="5" cols="70" value="" name="websites" id="websites" placeholder="http://www.fuzhen.com,http://www.fuzhen.com/1.html"></textarea>
+						<div class="input-note">填写网址，用英文逗号分隔</div>  
+						<a class="button  bg button-small" href="javascript:void"  id="newsUpdate">提交页面</a> 
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label">
+						<label></label>
+					</div>
+					<div class="field">
+						<span class="">（百度每日限制5000条）</span>        				 
+					</div>
+				</div>	 -->			
+
+			</div>
+		</div>
+	</form>
+	<div class="panel">
+		<div class="panel-head">
+			<a class="button  bg-main " href="javascript:void"  style="margin-left: 200px;" id="newsUpdate">刷新缓存</a>
+			<a class="button  bg-dot " href="javascript:void"  id="updateSitemap">开始推送</a><span class="">（每次1000条）</span> <span class="icon-info-circle info" style="font-size: 20px; color: #FF6600;"></span>
+		</div>
+		<div class="panel-body">
+			<div class="view-body" id="msgBox" style="max-height: 400px; overflow-y: scroll;">	
+				<span id="re" style="margin-left: 200px;"></span>
+				<ul class="list-group list-striped " id="msgUl">
+				</ul>
+			</div>
+		</div>
+		<div class="panel-foot" style="display: none;">
+			<span>常见的推送失败返回示例说明：</span>
+			<table class="table table-striped" style="width: 30%; background: #fff; margin: 30px; border: 1px solid #ccc;"> <tbody><tr>  <td width="75" valign="top">  <p><span lang="EN-US">error<o:p></o:p></span></p>  </td>  <td width="217" valign="top">  <p><span lang="EN-US">message<o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span>含义</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="75" valign="top" rowspan="4">  <p><span lang="EN-US">400<o:p></o:p></span></p>  </td>  <td width="217" valign="top">  <p><span lang="EN-US">site  error</span><span lang="EN-US"><o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span>站点未在站长平台验证</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="217" valign="top">  <p><span lang="EN-US">empty  content</span><span lang="EN-US"><o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span lang="EN-US">post</span><span>内容为空</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="217" valign="top">  <p><span lang="EN-US">only  2000 urls are allowed once</span><span lang="EN-US"><o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span>每次最多只能提交</span><span lang="EN-US">2000</span><span>条链接</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="217" valign="top">  <p><span lang="EN-US">over  quota</span><span lang="EN-US"><o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span>超过每日配额了，超配额后再提交都是无效的</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="75" valign="top">  <p><span lang="EN-US">401<o:p></o:p></span></p>  </td>  <td width="217" valign="top">  <p><span lang="EN-US">token  is not valid<o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span lang="EN-US">token</span><span>错误</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="75" valign="top">  <p><span lang="EN-US">404<o:p></o:p></span></p>  </td>  <td width="217" valign="top">  <p><span lang="EN-US">not  found<o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span>接口地址填写错误</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr> <tr>  <td width="75" valign="top">  <p><span lang="EN-US">500<o:p></o:p></span></p>  </td>  <td width="217" valign="top">  <p><span lang="EN-US">internal  error, please try later<o:p></o:p></span></p>  </td>  <td width="246" valign="top">  <p><span>服务器偶然异常，通常重试就会成功</span><span lang="EN-US"><o:p></o:p></span></p>  </td> </tr></tbody></table>
+		</div>
+	</div>
+	<script>
+  //var content_editor = 'xxxx';
+  Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+
+    }); 
+  $.ajaxSetup ({ cache: false });
+  function reloads() {
+  	var url = "{:U('doPost')}";
+  	$.ajax({
+  		type: "POST",       
+  		url: url,
+  		data: "data="+1000,
+  		dataType: 'json',
+  		beforeSend:function(){
+  			$("#re").html('正在推送。。。');
+  		},                                               
+  		success: function(msg){
+  			if (msg.error) {
+  				$("#re").html('推送失败，错误代码'+msg.error+'，错误描述'+msg.message);
+
+  			}else{
+  				$("#re").html('推送成功'+msg.success+'条，今日还能推送'+msg.remain+'条。');
+
+  			}   			        
+  		}
+  	});
+  }
+  $(document).ready(function(){	
+  	$("#updateSitemap").click(function(){
+  		reloads();
+  	});
+  	$(".info").click(function(){
+  		$(".panel-foot").fadeToggle();
+  	});
+  	$("#newsUpdate").click(function(){
+  		htmlobj=$.ajax({
+  			url:"{:U('newsUpdate')}",
+  			async:false,
+  			beforeSend:function(){
+  				$("#re").html('正在更新。。。');
+  			},
+  		});
+  		$("#re").html(htmlobj.responseText);
+  	})		
+  })
+</script>
+</div>

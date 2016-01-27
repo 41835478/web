@@ -1,0 +1,37 @@
+/* Write your styles */
+body{ background:#f9f9f9;}
+.am-topbar .am-text-ir { display: block; margin-right: 10px; height: 50px; width: 100px; background: url(../images/logo-s.png) no-repeat left center; -webkit-background-size: 100px 40px; background-size: 100px 40px; }
+.am-topbar-inverse { background: #191e29;; box-shadow: 0 0 5px #888; opacity: .95;border-color: #888; }
+.am-topbar-inverse .am-topbar-nav>li>a:focus:after, .am-topbar-inverse .am-topbar-nav>li>a:hover:after { border-bottom-color: #fff; }
+.pb10 { padding-bottom: 10px; }
+.mt20{ margin-top:20px;}
+.mt10{ margin-top:10px;}
+/*header*/
+/*收件箱*/
+.username{width:6rem; overflow:hidden; 
+ text-overflow: ellipsis;
+ white-space: nowrap;display:block;}
+ .dialogue{ text-indent:2em;}
+ .right_nav{ min-height:850px;}
+ .delete_p{ clear:both;}
+.piclistmr{ padding-left:0; padding-right:0; background-color:none; }
+ #piclistmr{ background:none;}
+ .admin-sidebar-sub{ background:none;}
+ #am-panel-default{ border-color:#f9f9f9; margin-bottom:0;}
+ .inboxcontent{ height:48px;  overflow: hidden; display:inline-block; line-height:24px; font-family:"微软雅黑"; font-size:14px;}
+ .delete_y,.delete_a{font-size:12px; color:#000000;}
+ .delete_y{ padding-left:5px !important;}
+ /*背景色*/.clickli{}
+ .table_border td{ border-top:none !important;}
+
+
+.btn_upload{
+    bottom: auto;
+    height: 28px;
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: auto;
+    top: -2.5px;
+    width: 42px;
+}

@@ -1,0 +1,55 @@
+<div class="admin-main">
+    <form method="post">
+    <div class="panel dux-box">
+        <div class="table-responsive">
+            <table class="table table-hover " id="table">
+                <tbody>
+                    <tr>
+                        <th width="100">编号</th>
+                        <th width="200">新闻栏目</th>       
+                        <th width="*">操作</th>
+                        <th width="*">数量</th>
+                        <th width="*">排序</th>
+                    </tr>
+				<foreach name="list" item="v">
+                    <tr>
+                        <td align="center">{$v.class_id}</td>
+                        <td><a target="_blank" href="#">{$v.name}</a></td>  
+                        <td>
+                            <a title="生成静态" href="{:U('edit',array('id'=>$k['class_id']))}" class="button bg-blue button-small">生成静态</a>
+                            <a title="修改" href="{:U('edit',array('id'=>$v['class_id']))}" class="button bg-blue button-small icon-pencil"></a>
+                            <a title="删除" data="{$v.class_id}" url="/admin.php?r=article/AdminCategory/del" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                        </td>  
+                        <td align="center"></td>
+                        <td align="center">{$v.sequence}</td>
+                    </tr>
+                    <foreach item ="k" name="v['class']">
+                    <tr>
+                        <td align="center">{$k.class_id}</td>                        
+                        <td><a href="{:U('news/index',array('id'=>$k['class_id']))}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;{$k.name}</a></td>
+                         <td>
+                            <a title="生成静态" href="{:U('edit',array('id'=>$k['class_id']))}" class="button bg-blue button-small">生成静态</a>
+                            <a title="修改" href="{:U('edit',array('id'=>$k['class_id']))}" class="button bg-blue button-small icon-pencil"></a>
+                            <a title="删除" data="{$k.class_id}" url="{:U('del')}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                        </td>
+                        <td align="center">{$k.class_id|getArticleNum}</td>
+                        <td align="center">{$k.sequence}</td>
+                       
+                    </tr>
+                    </foreach>
+				</foreach>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+        $('#table').duxTable({
+            actionUrl : "{:U('batchAction')}",
+            deleteUrl: "{:U('del')}",
+        });
+    });
+</script>
+</div>

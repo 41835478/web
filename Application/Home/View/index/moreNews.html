@@ -1,0 +1,19 @@
+<foreach item='v' name="list">
+<div class="am-g piclistmr right_content" style=" background-color:white;">
+	<div class="am-g piclistmr" style=" margin:20px 0;">
+		<div class="am-u-md-3">
+			<if condition="$v['image'] eq null">
+				<img src="__PUBLIC__/home/images/hosimg.jpg" width="98" height="108" alt="{$v.title}"/>
+			<else />
+				<img src="{$v.image}" onerror="javascript:this.src='http://www.fuzhen.com/Public/home/images/hosimg_error.jpg'" width="140" height="120" alt="{$v.title}"/>
+			</if>
+			<div class="column"><a class="type-color{$v.class_id}">{$v.class_id|getArcicleType}</a></div>
+		</div>
+		<div class="am-u-md-9">
+			<div class="lb_title"><a href="{$v['content_id']|getNewsUrl}"  target="_blank">{$v.title}</a></div>
+			<div class="headportrait"><span class="name">&nbsp;{$v.copyfrom}</span><span class="time">&nbsp;•&nbsp;{$v.time|friendly_date='mohu'}</span></div>
+			<div class="desc">{$v.description}</div>
+		</div>
+	</div>
+</div>
+</foreach>

@@ -1,0 +1,52 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="panel dux-box  active">
+        <div class="panel-head">
+            <strong>手机短信接口配置</strong>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="label">
+                    <label for="sitename">短信接口：</label>
+                </div>
+                <div class="field">
+                    <input type="text" datatype="*" value="{$db_config.TEL_URL}" size="60" name="config[TEL_URL]" id="site_title" class="input">
+                    <div class="input-note"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label for="sitename">短信用户名：</label>
+                </div>
+                <div class="field">
+                    <input type="text" datatype="*" value="{$db_config.TEL_USER}" size="60" name="config[TEL_USER]" id="site_subtitle" class="input">
+                    <div class="input-note"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label for="sitename">短信密码：</label>
+                </div>
+                <div class="field">
+                    <input type="text" datatype="*" value="{$db_config.TEL_PWD}" size="60" name="config[TEL_PWD]" id="site_subtitle" class="input">
+                    <div class="input-note"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-foot">
+            <div class="form-button">
+                <div id="tips"></div>
+                <input type="hidden" class="form-control input" name="id" value="5" >
+                <button type="submit" class="button bg-main">保存</button>
+                <button type="reset" class="button bg">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+        $('#form').duxForm();
+    });
+</script>
+</div>

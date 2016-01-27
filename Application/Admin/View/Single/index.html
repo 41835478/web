@@ -1,0 +1,59 @@
+<div class="admin-main">
+    <div class="panel dux-box">
+        <div class="table-responsive">
+            <table class="table table-hover " id="table">
+                <tbody>
+                    <tr>
+                        <th width="60">选择</th>
+                        <th width="100">编号</th>
+                        <th width="200">标题</th>
+                        <th width="100">栏目</th>
+                        <th width="160">更新时间</th>
+                        <th width="140">操作</th>
+                        <th width="*"></th>
+                    </tr>
+                    <foreach item="v" name="news">
+                        <tr>
+                            <td align="center">
+                                <input type="checkbox" value="{$v.id}" name="id[]">
+                            </td>
+                            <td align="center">{$v.id}</td>
+                            <td align=""><a href="{:U('edit',array('id'=>$v['id']))}">{$v.title}</a></td>
+                            <td align="center">{$v.type.name}</td>
+                            <td align="center">{$v.ctime|date='Y-m-d h:i:s',###}</td>
+                            <td align="center">
+                                <a title="预览" href="{:U('Home/single/index',array('id'=>$v['id']))}" target="_blank" class="button bg-blue button-small icon-eye"></a>
+                                <a title="修改" href="{:U('edit',array('id'=>$v['id']))}" class="button bg-blue button-small icon-pencil"></a>
+                                <a title="删除" data="{$v.id}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </foreach>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-foot table-foot clearfix">
+            <div class="float-left">
+                <div class="form-inline">
+                    <div class="form-button">
+                        <a type="button" id="selectAll" class="button bg-blue button-small">全选</a>
+                        <a type="submit" id="selectSubmit" class="button bg-blue button-small">删除</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="float-right">
+                <ul class="pagination pagination-small">{$page}</ul>
+            </div>
+        </div>
+    </div>
+    <script charset="utf-8" type="text/javascript">
+    Do.ready('base', function() {
+        //表格处理
+        $('#table').duxTable({
+            actionUrl: "{:U('batchAction')}",
+            deleteUrl: "{:U('del')}",
+        });
+    });
+    </script>
+</div>

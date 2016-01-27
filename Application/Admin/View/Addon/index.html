@@ -1,0 +1,42 @@
+<div class="admin-main">
+    <form method="post">
+    <div class="panel dux-box">
+        <div class="table-responsive">
+            <table class="table table-hover " id="table">
+                <tbody>
+                    <tr>
+                        <th width="100">编号</th>
+                        <th width="*">标识</th>
+                        <th width="*">名称</th>
+                        <th width="*">描述</th>
+                        <th width="*">状态</th>
+                        <th width="*">作者</th>
+                        <th width="300">操作</th>
+                    </tr>
+				<foreach name="list" item="v">
+                    <tr>
+                        <td align="center">{$v.id}</td>
+                        <td><a target="_blank" href="#">{$v.name}</a></td>
+                        <td>{$v.title}</td>
+                        <td>{$v.description}</td>
+                        <td align="center"><if condition="$v.status eq 1"><span class="tag bg-green">已启用</span></if><if condition="$v.status eq 0"><span class="tag bg-blue">被禁用</span></if></td>
+                        <td>{$v.author}</td>
+                        <td>
+                            <a title="设置" href="{:U('config',array('id'=>$v['id']))}" class="button bg-blue button-small">设置</a>
+                            <a title="禁用" href="{:U('config',array('id'=>$v['id']))}" class="button bg-blue button-small icon-pencil">禁用</a>
+                        </td>
+                    </tr>
+				</foreach>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-foot table-foot clearfix"><br /></div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+       $('#table').duxTable({});
+    });
+</script>
+</div>

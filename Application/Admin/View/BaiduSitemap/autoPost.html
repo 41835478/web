@@ -1,0 +1,38 @@
+
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+        <div class="panel ">
+            <div class="panel-head">
+                <strong>百度结构化插件</strong>
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <div class="label">
+                        <label>自动推送工具代码：</label>
+                    </div>
+                    <div class="field">
+                         <textarea class="input" rows="8" cols="100"  name="baidu_autopost" id="baidu_autopost" >{$bd.data}</textarea>
+                         <div class="input-note">模板引用代码：<literal>{:C('baidu_autopost')}</literal></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-foot ">
+                <div class="form-button">                    
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script>
+  //var content_editor = 'xxxx';
+  Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+
+    }); 
+</script>
+</div>

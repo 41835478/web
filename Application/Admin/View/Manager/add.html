@@ -1,0 +1,90 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>添加管理员</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>用户名：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="" datatype="*" size="60" name="admin_user" id="admin_user" class="input">
+                            
+                            <div class="input-note">用户名至少为3到16个任意字符</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>密码：</label>
+                        </div>
+                        <div class="field">
+                            <input name="admin_pwd" value="" type="password" datatype="*" class="input" />
+                            <div class="input-note">密码至少为6到16个任意字符</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>昵称：</label>
+                        </div>
+                        <div class="field">
+                            <input name="admin_name" type="text" class="input" />
+                            <div class="input-note">设置后前台页面显示此昵称</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>邮箱：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="admin_email" datatype="e" class="input" />
+                            <div class="input-note">请正确填写邮箱！</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+	                	<div class="label">
+	                    	<label>状态：</label>
+	                	</div>
+	                	<div class="field">
+	                        <div class="button-group button-group-small radio">
+	                            <label class="button active"><input type="radio" value="1" checked="checked" name="admin_islock">
+	                            <span class="icon icon-check"></span> 启用</label>
+	                            <label class="button"><input type="radio" value="0" name="admin_islock">
+	                            <span class="icon icon-times"></span> 禁用</label>
+	                        </div>
+	                    </div>
+           			</div>
+
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+  //var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+    }); 
+</script>
+</div>

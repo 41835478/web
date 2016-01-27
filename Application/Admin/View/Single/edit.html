@@ -1,0 +1,72 @@
+<div class="admin-main"> 
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>修改单页</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>单页标题</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.title}" datatype="*" size="60" name="title" id="title" class="input">
+                            <div class="input-note">文章标题请不要填写特殊字符</div>
+                        </div>
+                    </div>                                       
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>单页栏目</label>
+                        </div>
+                        <div class="field">
+                            <select name="typeid" id="typeid" class="input" data-validate="required:不为空">
+                                <option value="0">请选择栏目</option>
+                                <foreach item="v" name="t">
+                                    <option  style="background-color:#CCC" value="{$v.class_id}" <eq name="v['class_id']" value="$r['typeid']" >selected="selected"</eq> >{$v.name}</option>
+                                    <foreach item="k" name="v['class']">
+                                        <option value="{$k.class_id}" <eq name="k['class_id']" value="$r['typeid']" >selected="selected"</eq> >&nbsp;├─{$k.name}</option>                                                                
+                                    </foreach>
+                                </foreach>
+                            </select>
+                            <div class="input-note">当前文章的所属栏目</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>单页内容</label>
+                        </div>
+                        <div class="field"><textarea class="input js-editor" id="content" name="content" rows="20" >{$r.content}</textarea></div>
+                    </div>
+
+ 
+
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <input type="hidden" value="{$r.id}" name="id">
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+  //var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+    }); 
+</script>
+</div>

@@ -1,0 +1,112 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>站点信息</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">上传设置</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label"><label>上传大小：</label></div>
+                        <div class="field">
+                        <input type="text" name="maxSize" value="{$config.maxSize}" class="input input_small" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>保存路径：</label></div>
+                        <div class="field">
+                        <input type="text" name="savePath" value="{$config.savePath}" class="input input_big" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>文件后缀：</label></div>
+                        <div class="field">
+                        <input type="text" name="allowExts" value="{$config.allowExts}" class="input input_big" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>文件类型：</label></div>
+                        <input type="text" name="allowTypes" value="{$config.allowTypes}" class="input input_big" size="60" />
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>缩略图：</label></div>
+                        <div class="field button-group button-group-small radio">
+                        <if condition="$config['thumb'] eq 1">
+                            <label class="button active"><input type="radio" value="1" name="thumb" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="1" name="thumb">
+                        </if>
+                            <span class="icon icon-check"></span> 启用</label>
+                        <if condition="$config['thumb'] eq 0">
+                            <label class="button active"><input type="radio" value="0" name="thumb" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="0" name="thumb">
+                        </if>
+                            <span class="icon icon-times"></span> 禁用</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label"><label>缩略图宽度：</label></div>
+                        <div class="field">
+                        <input type="text" name="thumbMaxWidth" value="{$config.thumbMaxWidth}" class="input input_big" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>缩略图高度：</label></div>
+                        <div class="field">
+                        <input type="text" name="thumbMaxHeight" value="{$config.thumbMaxHeight}" class="input input_big" size="60" />
+                        </div>
+                    </div>                 
+                    <div class="form-group">
+                        <div class="label"><label>缩略图前缀：</label></div>
+                        <div class="field">
+                        <input type="text" name="thumbPrefix" value="{$config.thumbPrefix}" class="input input_big" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>缩略图保存路径：</label></div>
+                        <div class="field">
+                        <input type="text" name="thumbPath" value="{$config.thumbPath}" class="input input_big" size="60" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>是否删除原图：</label></div>
+                        <div class="field button-group button-group-small radio">
+                        <if condition="$config['thumbRemoveOrigin'] eq 1">
+                            <label class="button active"><input type="radio" value="1" name="thumbRemoveOrigin" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="1" name="thumbRemoveOrigin">
+                        </if>
+                            <span class="icon icon-check"></span> 启用</label>
+                        <if condition="$config['thumbRemoveOrigin'] eq 0">
+                            <label class="button active"><input type="radio" value="0" name="thumbRemoveOrigin" checked="checked">
+                        <else />
+                            <label class="button"><input type="radio" value="0" name="thumbRemoveOrigin">
+                        </if>
+                            <span class="icon icon-times"></span> 禁用</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+    </div>
+</form>
+<script>
+    Do.ready('base', function () {
+       $('#form').duxFormPage();
+    });
+</script>
+</div>

@@ -1,0 +1,49 @@
+<div class="admin-main">
+    <div class="panel dux-box">
+    <div class="table-responsive">
+        <table class="table table-hover " id="table">
+            <tbody>
+                <tr>
+                    <th width="*" align="left">备份名称</th>
+                    <th width="120">卷数</th>
+                    <th width="*">压缩</th>
+                    <th width="*">数据大小</th>
+                    <th width="*">备份时间</th>
+                    <th width="100">操作</th>
+                </tr>
+                <foreach item="v" name="list">
+                <tr>
+                    <td>{$v.time|time_format}</td>
+                    <td align="center">{$v.part}</td>
+                    <td align="center">{$v.compress}</td>
+                    <td align="center">{$v.size}</td>
+                    <td align="center">{$key}</td>
+                    <td>
+                        <a title="还原" href="{:U('edit',array('tag_id'=>$v['tag_id']))}" class="button bg-blue button-small icon-share-square-o js-action"></a>
+                        <a title="删除" data="" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                    </td>
+                </tr>
+                </foreach>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel-foot table-foot clearfix">
+        <div class="float-left">
+            <br>
+        </div>
+        <div class="float-right">
+            <ul class="pagination pagination-small">{$page}</ul>
+        </div>
+    </div>
+</div>
+<script>
+    Do.ready('base', function () {
+        //表格处理
+        $('#table').duxTable({
+            actionUrl : "{:U('batchAction')}",
+            deleteUrl: "{:U('del')}",
+        });
+    });
+</script>
+</div>

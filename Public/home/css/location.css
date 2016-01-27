@@ -1,0 +1,35 @@
+  ul, li, ol { list-style: none; padding: 0; margin: 0; }
+.sub-title { font-weight: normal; clear:both; }
+.letter { float: left; margin-left: -30px; width: 30px; overflow: hidden; padding: 0; display: inline; font-size: 20px; font-family: Centaur, Times New Roman; text-transform: uppercase; }
+
+
+.row-list { margin-bottom: 50px; }
+.row-list:last-child { margin: 0; }
+.row-list .hd { margin-bottom: 25px; font-size: 32px; line-height: 30px; font-weight: normal; }
+.row-list .hd span { font-size: 14px; color: #a8a8a8; }
+.row-list .bd { overflow: hidden; }
+.row-list dl { margin-bottom: 50px; }
+.row-list dt {font-size: 20px; line-height: 50px; }
+.row-list dd { margin-left: -22px; }
+.row-list ul { float: left; padding-left: 30px; display: inline; margin-left: 22px; line-height: 30px; font-size: 14px; }
+.row-list ul li{ float: left; padding-right: 12px; width: 234px;}
+.row-list dd a { color: #666; }
+.row-list dd .link-hot { color: #ff3600; }
+.row-list dd .en { color: #a8a8a8; font-family: Arial; word-wrap: break-word; word-break: normal; }
+.row-list .letter { float: left; margin-left: -30px; width: 30px; overflow: hidden; padding: 0; display: inline; font-size: 20px; font-family: Centaur, Times New Roman; text-transform: uppercase; }
+.row-list .icon-label { position: absolute; margin: 8px 0 0 5px; *margin-top:2px;
+width: 32px; height: 14px; background: url(/images/mdd/place/plaInd-sprite3.png) no-repeat -555px 0; overflow: hidden; font-size: 14px; color: #fff; font-style: italic; font-weight: bold; line-height: 100px; overflow: hidden; vertical-align: top; }
+.row-list .texas { background-color: #9f4d31; color: #fefefe; font-size: 12px; font-family: sans-serif, Verdana, "Microsoft Yahei", Helvetica, "微软雅黑", "宋体"; margin-left: 40px; overflow: hidden; padding: 1px 3px; vertical-align: top; text-decoration: none }
+
+.get {
+  background: #1E5B94;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+.get-title {
+  font-size: 200%;
+  border: 2px solid #fff;
+  padding: 20px 40px;
+  display: inline-block; border-radius:5px;
+}

@@ -1,0 +1,154 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+		    <div class="tab-body">
+				<div class="tab-panel active">
+				    <div class="form-group">
+	                <div class="label"><label>开启同步登录：</label></div>
+	                <div class="field">
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][0] eq Weixin">
+						<input type="checkbox" name="config[type][]" value="Weixin" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Weixin" >
+						</if>
+						Weixin</label>
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][1] eq Qq">
+						<input type="checkbox" name="config[type][]" value="Qq" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Qq" >
+						</if>
+						Qq</label>
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][2] eq Sina">
+						<input type="checkbox" name="config[type][]" value="Sina" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Sina" >
+						</if>
+						Sina</label>
+						<label class="checkbox-inline">
+						<if condition="$db_config['type'][3] eq Renren">
+						<input type="checkbox" name="config[type][]" value="Renren" checked >
+						<else />
+						<input type="checkbox" name="config[type][]" value="Renren" >
+						</if>
+						Renren</label>
+	                </div>
+					</div>
+
+					<div class="form-group">
+	                <div class="label"><label>接口验证代码：</label></div>
+	                <div class="field">
+						<textarea class="input" rows="5" cols="62" name="config[meta]" >{$db_config.meta}</textarea>
+						<div class="input-note">需要在Meta标签中写入验证信息时，拷贝代码到这里。</div>
+	                </div>
+	            	</div>
+		    	</div>
+			</div>
+		</div>
+	</div>
+	<br />
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>插件信息设置</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">微信配置</a></li>
+                        <li><a href="#tab-2">QQ配置</a></li>
+                        <li><a href="#tab-3">新浪配置</a></li>
+                        <li><a href="#tab-4">人人配置</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label"><label>微信APPKEY：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.WeixinKEY}" size="60" name="config[WeixinKEY]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://open.weixin.qq.com/）</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>微信APPSECRET：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.WeixinSecret}" size="60" name="config[WeixinSecret]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://open.weixin.qq.com/）</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="tab-2" class="tab-panel">
+                    <div class="form-group">
+                        <div class="label"><label>QQ互联APPKEY：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.QqKEY}" datatype="*" size="60" name="config[QqKEY]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://connect.qq.com）</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>QQ互联APPSECRET：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.QqSecret}" datatype="*" size="60" name="config[QqSecret]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://connect.qq.com）</div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div id="tab-3" class="tab-panel">  
+                    <div class="form-group">
+                        <div class="label"><label>新浪APPKEY：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.SinaKEY}" datatype="*" size="60" name="config[SinaKEY]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://open.weibo.com/）</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>新浪APPSECRET：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.SinaSecret}" datatype="*" size="60" name="config[SinaSecret]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://open.weibo.com/）</div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div id="tab-4" class="tab-panel">
+                    <div class="form-group">
+                        <div class="label"><label>人人APPKEY：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.RenrenKEY}" datatype="*" size="60" name="config[RenrenKEY]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://dev.renren.com/）</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label"><label>人人APPSECRET：</label></div>
+                        <div class="field">
+                            <input type="text" value="{$db_config.RenrenSecret}" datatype="*" size="60" name="config[RenrenSecret]" id="title" class="input">
+                            <div class="input-note">（申请地址：http://dev.renren.com/）</div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <input type="hidden" class="form-control input" name="id" value="3" >
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+	//var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        //$('#form').duxFormPage();
+    }); 
+</script>
+    </div>

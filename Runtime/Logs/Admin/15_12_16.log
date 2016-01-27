@@ -1,0 +1,687 @@
+[ 2015-12-16T08:53:59+08:00 ] 127.0.0.1 /admin/addon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0050s ]
+
+[ 2015-12-16T08:53:59+08:00 ] 127.0.0.1 /admin/public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-16T08:54:03+08:00 ] 127.0.0.1 /admin/public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `fz_admin` WHERE `group` >= 1 AND `admin_user` = 'adminss' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `fz_admin` SET `login`=`login`+1,`last_login_time`='1450227243',`last_login_ip`='2130706433' WHERE `admin_id` = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:05+08:00 ] 127.0.0.1 /admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `fz_spider` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `fz_spider` ORDER BY id desc LIMIT 8   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `fz_visitor` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Common\Model\VisitorModel::getChart(), called in C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php on line 64 and defined C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 91 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 104 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 112 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 120 行.
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1450195200 AND `time` < 1450281600  ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1450108800 AND `time` < 1450195200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1450022400 AND `time` < 1450108800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449936000 AND `time` < 1450022400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449849600 AND `time` < 1449936000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449763200 AND `time` < 1449849600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449676800 AND `time` < 1449763200  ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 16 行.
+NOTIC: [8] Undefined variable: info C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 60 行.
+NOTIC: [8] Undefined variable: desc C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:07+08:00 ] 127.0.0.1 /admin/makehtml/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\ad665464c49362465b5c202d42defaa6.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-16T08:54:08+08:00 ] 127.0.0.1 /admin/news/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_article` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id C:\wamp\Apache2.2\www\lycms\Application\Admin\Controller\NewsController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `fz_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `fz_category` WHERE ( parent_id=0 )  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `fz_category` WHERE ( parent_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fz_article` WHERE `title` LIKE '%%' LIMIT 1   [ RunTime:0.3950s ]
+NOTIC: [2] urlencode() expects parameter 1 to be string, array given C:\wamp\Apache2.2\www\lycms\Application\Admin\Controller\NewsController.class.php 第 45 行.
+SQL: SELECT * FROM `fz_article` WHERE `title` LIKE '%%' ORDER BY content_id desc LIMIT 0,15   [ RunTime:0.0250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\36087655c6ab8580337cdc45b35a926d.php 第 16 行.
+NOTIC: [8] Undefined variable: desc C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\36087655c6ab8580337cdc45b35a926d.php 第 61 行.
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `fz_category` WHERE ( class_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:13+08:00 ] 127.0.0.1 /admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_spider` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_spider` ORDER BY id desc LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fz_visitor` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 1 for Common\Model\VisitorModel::getChart(), called in C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php on line 64 and defined C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 91 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 104 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 112 行.
+NOTIC: [8] Undefined variable: type C:\wamp\Apache2.2\www\lycms\Application\Common\Model\VisitorModel.class.php 第 120 行.
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1450195200 AND `time` < 1450281600  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1450108800 AND `time` < 1450195200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1450022400 AND `time` < 1450108800  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449936000 AND `time` < 1450022400  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449849600 AND `time` < 1449936000  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449763200 AND `time` < 1449849600  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(count) AS tp_sum FROM `fz_visitor` WHERE ( `time` >= 1449676800 AND `time` < 1449763200  ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 16 行.
+NOTIC: [8] Undefined variable: info C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 60 行.
+NOTIC: [8] Undefined variable: desc C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:14+08:00 ] 127.0.0.1 /admin/user/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `fz_user`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 16 行.
+NOTIC: [8] Undefined variable: desc C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 61 行.
+NOTIC: [8] Undefined variable: pages C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:15+08:00 ] 127.0.0.1 /admin/tag/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_tags` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `fz_tags` WHERE `name` LIKE '%%' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `fz_tags` WHERE `name` LIKE '%%' ORDER BY tag_id desc LIMIT 0,15   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\7c795ebe2e70f62ae37162cd91f6905c.php 第 16 行.
+NOTIC: [8] Undefined variable: desc C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\7c795ebe2e70f62ae37162cd91f6905c.php 第 61 行.
+NOTIC: [8] Undefined variable: keyword C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\7c795ebe2e70f62ae37162cd91f6905c.php 第 85 行.
+NOTIC: [8] Undefined variable: page C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\7c795ebe2e70f62ae37162cd91f6905c.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:16+08:00 ] 127.0.0.1 /admin/addon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\fedec8e4a8018035083b68b3d3e264ca.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\fedec8e4a8018035083b68b3d3e264ca.php 第 64 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:54:22+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Undefined index: meta C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 112 行.
+NOTIC: [8] Undefined index: WeixinKEY C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 139 行.
+NOTIC: [8] Undefined index: WeixinSecret C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 146 行.
+NOTIC: [8] Undefined index: QqKEY C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 157 行.
+NOTIC: [8] Undefined index: QqSecret C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 164 行.
+NOTIC: [8] Undefined index: SinaKEY C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 174 行.
+NOTIC: [8] Undefined index: SinaSecret C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 181 行.
+NOTIC: [8] Undefined index: RenrenKEY C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 191 行.
+NOTIC: [8] Undefined index: RenrenSecret C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:55:23+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-16T08:55:23+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:55:23+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:01+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:03+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:03+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:03+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:03+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `fz_addon` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 64 行.
+NOTIC: [8] Use of undefined constant Weixin - assumed 'Weixin' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 87 行.
+NOTIC: [8] Use of undefined constant Qq - assumed 'Qq' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 92 行.
+NOTIC: [8] Use of undefined constant Sina - assumed 'Sina' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 97 行.
+NOTIC: [8] Undefined offset: 3 C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+NOTIC: [8] Use of undefined constant Renren - assumed 'Renren' C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\8f1a48ea8d2be2ba8cdce808761d47ba.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:12+08:00 ] 127.0.0.1 /admin/addon/config/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0050s ]
+SQL: UPDATE `fz_addon` SET `config`='{\"type\":[\"Weixin\",\"Qq\",\"Sina\",\"Renren\"],\"meta\":\"&lt;meta property=&quot;qc:admins&quot; content=&quot;33145362720566375&quot; \\/&gt;\",\"WeixinKEY\":\"wxf22fd89cc4cc7103\",\"WeixinSecret\":\"79bce1117055e2db627ca7ab773ee895\",\"QqKEY\":\"101226608\",\"QqSecret\":\"e2f74494917647ac0decfe103fb34138\",\"SinaKEY\":\"1358097304\",\"SinaSecret\":\"a571a1080dabd34e95b1b3164dc182f9\",\"RenrenKEY\":\"\",\"RenrenSecret\":\"\"}' WHERE ( id=3 ) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-16T08:56:13+08:00 ] 127.0.0.1 /admin/addon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitConfigBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `fz_admin` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fz_addon` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `fz_addon`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\fedec8e4a8018035083b68b3d3e264ca.php 第 16 行.
+NOTIC: [8] Undefined index: menu C:\wamp\Apache2.2\www\lycms\Runtime\Cache\Admin\fedec8e4a8018035083b68b3d3e264ca.php 第 64 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

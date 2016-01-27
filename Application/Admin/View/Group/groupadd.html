@@ -1,0 +1,43 @@
+<div id="tips"></div>
+<div class="panel dux-box">
+    <div class="panel-head"><strong>添加用户组</strong></div>
+	<form name="form1" method="post" id="form" action="">
+	<div class="tab-body">
+	<table width="1102" class="table">
+	        <tbody>
+	            <tr class="form-group">
+	              	<td width="198" align="right" valign="middle"><strong>组别名称：</strong></td>
+	     		<td colspan="3"><input name="name" datatype="*" type="text" nullmsg="请输入组别名称！" class="input input_small" /><span class="input-note">至少为3到16个任意字符</span></td>
+	            </tr>
+	            <tr class="form-group">
+	                <td width="198" align="right" valign="middle"><strong>组别描述：</strong></td>
+	                <td colspan="3"><input name="remark" type="text" class="input input_small" /></td>
+	            </tr>
+	            <tr class="form-group">
+		             <td align="right"><strong>状态：</strong></td>
+		             <td colspan="3">
+		                    <label><input name="status" type="radio" value="1" checked="checked" />启用</label> &nbsp;&nbsp;
+		                    <label><input type="radio" name="admin_islock" value="0" />禁用</label>&nbsp;&nbsp;
+		             </td>
+	            </tr>
+	            <tr>
+	                <td align="right">&nbsp;</td>
+	                <td colspan="3">&nbsp;</td>
+	            </tr>
+	        </tbody>
+	</table>
+	</div>
+
+	<div class="panel-foot">
+	    <div class="form-button">
+	        <button class="button bg-main" type="submit">确认保存</button>
+	        <button class="button bg" type="reset">重置</button>
+	    </div>
+	</div>
+	</form>
+</div>
+<script>
+    Do.ready('base', function () {
+        $('#form').duxFormPage();
+    });
+</script>

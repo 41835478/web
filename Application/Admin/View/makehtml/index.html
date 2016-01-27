@@ -1,0 +1,106 @@
+<div class="admin-main">
+    <form id="form" class="form-x dux-form form-auto">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>静态页生成列表</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">生成网站</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+                    <div class="form-group">
+                        <div class="label"><label>网站首页：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="javascript:void" id="makeIndex">点击生成</a>
+                            <span id="re"></span>
+                        </div>
+                    </div>
+                    <hr />
+<!--                     <div class="form-group">
+                        <div class="label"><label>医院首页：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="javascript:void" id="makeIndex">点击生成</a>
+                        </div>
+                    </div> -->
+
+                    <div class="form-group">
+                        <div class="label"><label>生成全部医院页面：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'hospital'))}" id="">点击生成</a>
+                        </div>
+                    </div>
+
+                    <hr />
+<!--                     <div class="form-group">
+                        <div class="label"><label>生成医生列表：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" class="button bg-main" href="javascript:void" id="makeIndex">点击生成</a>
+                        </div>
+                    </div> -->
+
+                    <div class="form-group">
+                        <div class="label"><label>生成全部医生页面：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'doctor'))}" id="">点击生成</a>
+                        </div>
+                    </div>
+
+                    <hr />
+<!--                     <div class="form-group">
+                        <div class="label"><label> 生成当天的新闻：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'article'))}" id="">点击生成</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label"><label> 生成一周内的新闻：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'article'))}" id="">点击生成</a>
+                        </div>
+                    </div>  -->  
+
+                    <div class="form-group">
+                        <div class="label"><label> 生成全部新闻：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'article'))}" id="">点击生成</a>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="form-group">
+                        <div class="label"><label>生成专题页：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'zhuanti'))}" id="">点击生成</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label"><label>生成网站单页：</label></div>
+                        <div class="field">
+                            <a class="button bg-main" href="{:U('updateHtml',array('type'=>'single'))}" id="">点击生成</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function(){
+      $("#makeIndex").click(function(){
+        htmlobj=$.ajax({url:"{:U('makeIndex')}",dataType:"text",async:false,success:function(data){ $("#re").text(data);} });         
+      });
+  });
+</script>

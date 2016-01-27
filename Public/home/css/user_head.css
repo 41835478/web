@@ -1,0 +1,134 @@
+/* Write your styles */
+body {
+	background: #f9f9f9;
+}
+.am-topbar .am-text-ir {
+	display: block;
+	margin-right: 10px;
+	height: 50px;
+	width: 100px;
+	background: url(../images/LOGO%200720%202.png) no-repeat left center;
+	-webkit-background-size: 100px 40px;
+	background-size: 100px 40px;
+}
+.am-topbar-inverse {
+	background: #fff;
+	;
+	box-shadow: 0 0 5px #888;
+	opacity: .95;
+	border-color: #888;
+}
+.am-topbar-inverse .am-topbar-nav>li>a:focus:after, .am-topbar-inverse .am-topbar-nav>li>a:hover:after {
+	border-bottom-color: #fff;
+}
+.pb10 {
+	padding-bottom: 10px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+.am-nav li a {
+	color: #000000 !important;
+	background: none !important;
+	font-size: 14px;
+}
+.am-nav li>a:hover {
+	background: none !important;
+	color: red !important;
+}
+.am-topbar-nav > li > a::after {
+	display: none !important;
+}
+.border {
+	border-radius: 50px;
+	width: 30px !important;
+	padding-right: 26px;
+	transition: width 1s;
+	display: block;
+}
+.border:hover {
+	width: 200px !important;
+	background-position: right 8px center;
+}
+.head-left {
+	margin-left: 200px;
+}
+.btn-bk {
+	background: url(../images/iconfont-sousuo.png) no-repeat;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.scbar {
+	width: 140px;
+}
+#scbar_form {
+	background: #fff
+}
+#scbar {
+	overflow: hidden;
+	height: 53px;
+	line-height: 52px;
+	background: #fff;
+}
+.cl {
+	zoom: 1;
+}
+.scbar_txt_td, .scbar_btn_td {
+	background: none;
+}
+#scbar #scbar_txt {
+	background: url(../images/sss.png) no-repeat;
+	width: 0px;
+	border: none;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 20px;
+	transition: width 0.6s;
+	-moz-transition: width 0.6s;
+	-o-transition: width 0.6s;
+	-webkit-transition: width 0.6s;
+	color: #CCCCCC;
+}
+.scbar_btn_td {
+	width: 38px;
+	background: url(../images/sss.png) no-repeat 8px -142px;
+}
+.scbar_btn_td {
+	width: 20px;
+}
+#scbar_btn {
+	background: url(../images/sss.png) no-repeat right -42px;
+	width: 30px;
+	height: 42px;
+	line-height: 42px;
+	margin-left: -10px;
+	border: none;
+}
+#scbar_btn strong {
+	line-height: 100px;
+}
+#scbar:hover #scbar_txt {
+	width: 120px;
+}
+
+@media (max-width:680px) {
+.am-dropdown {
+	width: 100% !important;
+	overflow: hidden;
+}
+.am-nav li {
+	float: none !important;
+	display: block !important;
+	width: 100% !important
+}
+.am-nav-justify {
+	display: block !important;
+}
+.head-left {
+	margin-left: 0px !important;
+}
+.am-nav li a {
+	text-align: left !important;
+}
+}

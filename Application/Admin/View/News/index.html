@@ -1,0 +1,124 @@
+<div class="admin-main">
+    <div class="panel dux-box">
+   <div class="table-tools clearfix ">
+        <div class="float-left">
+            <form action="" method="get">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="field">
+                            <input type="text" placeholder="{$keyword}" value="" size="20" name="keyword" id="keyword" class="input">
+                        </div>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="button">搜索</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="float-right">
+            <form action="" method="post">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="field">
+                            <select id="class_id" name="class_id" class="input">
+                              <option value="0">选择栏目</option>
+                              <foreach item="v" name="cate">
+                                <option disabled="disabled" style="background-color:#CCC" value="{$v.class_id}">{$v.name}</option>
+                                <foreach item="k" name="v['class']">
+                                <option value="{$k.class_id}">&nbsp;&nbsp;├{$k.name}</option>
+                                </foreach>
+                              </foreach>
+                           </select>
+                        </div>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="button">筛选</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover " id="table">
+            <tbody>
+                <tr>
+                    <th width="60">选择</th>
+                    <th width="100">编号</th>
+                    <th width="100">操作</th>
+                    <th width="*">标题</th>
+                    <th width="*">栏目</th>
+                    <th width="*">状态</th>
+                    <th width="160">更新时间</th>
+                    <th width="160">作者</th>
+                </tr>
+
+                <foreach item="v" name="news">
+                <tr>
+                    <td>
+                        <input type="checkbox" value="{$v.content_id}" name="id[]">
+                    </td>
+                    <td>{$v.content_id}</td>
+                    <td>
+                        <a title="预览" href="{:U('Home/News/content',array('id'=>$v['content_id']))}" class="button bg-blue button-small icon-eye"></a>
+                        <a title="删除" data="{$v.content_id}" href="javascript:;" class="button bg-red button-small icon-trash-o js-del"></a>
+                    </td>
+                    <td><a href="{:U('edit',array('content_id'=>$v['content_id']))}">{$v.title}</a></td>
+                    <td align="center"><a target="_blank" href="{:U('Home/News/index',array('cid'=>$v['class_id']))}">{$v.class_id|getCateTitle}</a></td>
+                    <td align="center">
+                        <span class="tag bg-green">正常</span>
+                    </td>
+                    <td align="center">{$v.time|date='Y-m-d',###}</td>
+                    <td align="center">{$v.copyfrom}</td>
+
+                </tr>
+                </foreach>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel-foot table-foot clearfix">
+        <div class="float-left">
+            <div class="form-inline">
+                <div class="form-group">
+                    <div class="field">
+                        <select id="selectAction" class="input">
+                            <option value="1">删除</option>
+                            <option value="2">移动</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-button">
+                    <a type="button" id="selectAll" class="button bg-blue button-small">全选</a>
+                    <a type="submit" id="selectSubmit" class="button bg-blue button-small">执行</a>
+                </div>
+
+            </div>
+            <br>
+        </div>
+        <div class="float-right">
+            <ul class="pagination pagination-small">{$page}</ul>
+        </div>
+    </div>
+</div>
+<script charset="utf-8" type="text/javascript">
+	Do.ready('base',function() {
+		//移动操作
+		$('#selectAction').change(function() {
+			var type = $(this).val();
+			if(type == 2){
+				$(this).after($('#class_id').clone());
+			}else{
+				$(this).nextAll('select').remove();
+			}
+		});
+		//表格处理
+		$('#table').duxTable({
+			actionUrl : "{:U('batchAction')}",
+			deleteUrl: "{:U('del')}",
+			actionParameter : function(){
+				return {'class_id' : $('#selectAction').next('#class_id').val()};
+			}
+		});
+	});
+</script>
+</div>

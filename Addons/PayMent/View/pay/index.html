@@ -1,0 +1,20 @@
+<php>if(!empty($config['type'])){</php>
+<div>
+    <form action="{:U('Addons://PayMent/Pay/index')}" method="post">
+        <php>if(in_array('Weixin',$config['type'])):</php>
+        <label><input type="radio" name="paytype" value="alipay" />支付宝</label>
+        <php>endif;</php>
+        <php>if(in_array('Qq',$config['type'])):</php>
+        <label><input type="radio" name="paytype" value="tenpay" />财付通</label>
+        <php>endif;</php>
+        <php>if(in_array('Sina',$config['type'])):</php>
+        <label><input type="radio" name="paytype" value="kuaiqian" />快钱</label>
+        <php>endif;</php>
+        <php>if(in_array('Renren',$config['type'])):</php>
+        <label><input type="radio" name="paytype" value="unionpay" />银联</label>
+        <php>endif;</php>
+        <input type="text" name="money" value="200" />
+        <input type="submit" value="提交" />
+    </form>
+</div>
+<php>}</php>

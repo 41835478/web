@@ -1,0 +1,100 @@
+<div class="admin-main">
+    <form action="" id="form" class="form-x dux-form form-auto" method="post">
+    <div class="tab dux-tab">
+        <div class="panel dux-box  active">
+            <div class="panel-head">
+                <div class="tab-head">
+                    <strong>修改文章</strong>
+                    <ul class="tab-nav">
+                        <li class="active"><a href="#tab-1">基本信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-body">
+                <div id="tab-1" class="tab-panel active">
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>广告名称：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.title}" datatype="*" size="60" name="title" id="title" class="input">
+                            <div class="input-note">文章标题请不要填写特殊字符</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>广告标题：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.title_cn}" datatype="*" size="60" name="title_cn" id="title" class="input">
+                            <div class="input-note">广告标题请不要填写特殊字符</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>广告标签：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.label}" size="60" name="label" id="label" class="input">
+                            <div class="input-note">广告短标签，2~4个字符</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label>形象图：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" class="input" id="image" name="image" size="38" value="{$r.images}">
+                            <a class="button bg-blue button-small  js-img-upload" data="image" id="image_upload" preview="image_preview" href="javascript:;" ><span class="icon-upload"> 上传</span></a>
+                            <a class="button bg-blue button-small icon-picture-o" id="image_preview" href="javascript:;" > 预览</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>图片的宽度：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.width}" size="60" name="width" id="width" class="input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="label">
+                            <label>图片的高度：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.height}" size="60" name="height" id="height" class="input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="label">
+                            <label>链接地址：</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value="{$r.url}" size="60" name="url" id="url" class="input">
+                            <div class="input-note">设置后访问内容会跳转</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-foot">
+                <div class="form-button">
+                    <div id="tips"></div>
+                    <input type="hidden" value="{$r.id}" name="id">
+                    <button type="submit" class="button bg-main">保存</button>
+                    <button type="reset" class="button bg">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+  //var content_editor = 'xxxx';
+    Do.ready('base', function () {
+        //表单综合处理
+        $('#form').duxFormPage();
+    }); 
+</script>
+</div>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="__PUBLIC__/common/css/pintuer.css">
+<link rel="stylesheet" href="__PUBLIC__/lib/css/admin.css">
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/common/js/pintuer.js"></script>
+<script src="__PUBLIC__/common/js/respond.js"></script>
+<script>
+var duxConfig = {
+    //基础配置
+    'baseDir' : '__PUBLIC__/js/',
+    'baseUrl' : '__ROOT__/',
+    'uploadUrl' : "{:U('Upload/upload',array('id'=>$action))}",
+    //自定义配置
+    'libDir' : '__PUBLIC__/lib/js/',
+    'editorUploadUrl' : "{:U('Upload/editor')}",
+    };
+</script>
+<script src="__PUBLIC__/js/do.js"></script>
+<script src="__PUBLIC__/js/config.js"></script>
+<script src="__PUBLIC__/lib/js/definition.js"></script>
+<title>网站后台系统管理系统 -- 复诊网</title>
+</head>
+
+<body>
+<div class="dux-head clearfix">
+    <div class="dux-logo">
+        <a href="#" target="_blank"><img src="__PUBLIC__/admin/images/logo.png" alt="后台管理系统"></a>
+    </div>
+    <div class="dux-nav">
+        <ul class="nav nav-navicon nav-inline admin-nav">
+          <foreach name="meau" item="vo" key="k">
+              <if condition='$active eq $k'><li class="active"><else /><li></if><a href="{$vo['url']}" class="icon-{$vo['icon']}"> {$vo['name']} </a></li>
+          </foreach>
+       </ul>
+        <ul class="nav nav-navicon nav-inline admin-nav nav-tool">
+           <li><a>欢迎您：{$__ADMIN__.username}</a></li>
+           <li><a href="/" target="_blank" class="icon-home"> 网站首页</a></li>
+           <li><a href="{:U('User/index')}" class="icon-user"> 个人中心</a></li>
+           <li><a href="{:U('Public/logout')}" class="dux-logout bg-red icon-power-off"> 退出</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="dux-sidebar">
+       <ul class="nav  nav-navicon admin-menu">
+          <div class="nav-head">{$meau[$active]['name']}</div>
+          <foreach name="meau[$active]['menu']" item="vo" key="k">
+              <if condition="$vo.active eq $a"><li class="active"><else /><li></if>
+              <a href="{$vo['url']}" class="icon-{$vo['icon']}">{$vo['name']}</a></li>
+          </foreach>
+       </ul>
+    </div>
+<div class="dux-bread">
+    <ul class="bread">
+        <li><a href="{:U('Index/index')}" class="icon-home">后台首页</a></li>
+        <li><a href="{$meau[$active]['url']}">{$meau[$active]['name']}</a></li>
+    </ul>
+</div>
+<div class="dux-admin">       
+    <div class="dux-tools">
+        <div class="bread-head">{$info}
+            <span class="small">{$desc}</span>
+        </div>
+        <br>
+    <if condition="$init['menu']">
+      <div class="tools-function clearfix">
+          <div class="float-left">
+            <foreach name="init['menu']" item="vo">
+              <if condition="$vo['url'] eq $self">
+              <a class="button button-small bg-main icon-{$vo.icon}" href="{$vo.url}"> {$vo.name} </a>
+              <else />
+              <a class="button button-small bg-back icon-{$vo.icon}" href="{$vo.url}"> {$vo.name} </a>
+              </if>
+            </foreach>
+          </div>
+
+          <if condition="$init['add']">
+          <div class="float-right">
+              <a class="button button-small bg-dot icon-{$init['add']['icon']}" href="{$init['add']['url']}"> {$init['add']['name']}</a> 
+          </div>
+          </if>
+      </div>
+    </if>
+  </div>
+<div class="line10"></div>
+{__CONTENT__}
+</div>
+</body>
+</html> 

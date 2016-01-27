@@ -1,0 +1,118 @@
+.help_box {  background: #f3f4f6 url(../images/wrap_bg.png) no-repeat center 0; font: 12px/1.6em Microsoft YaHei, Tahoma, simsun; color: #3a3f4a; padding-bottom:20px;}
+.help_top { height: 40px; line-height: 40px; margin: 0; padding: 0 0 0 1.5rem; }
+/*左*/
+.help_main { border: 1px solid #e6e9ef; background-color: white; }
+.help_left {}
+.main_title { border-bottom: 1px solid #f3f4f6;   padding: 6px 10px 7px 5px;font: 16px/20px "Microsoft Yahei";margin: 10px; }
+.main_title i {  color: #999;margin-right:10px;}
+.main_title .icone_one { background-position: 0 0; }
+.main_title .icone_two { background-position: -30px 0; }
+.main_title .icone_three { background-position: -60px 0; }
+.main_title .icone_four { background-position: -90px 0; }
+.main_title .icone_five { background-position: -120px 0; }
+.main_title .icone_six { background-position: -150px 0; }
+.main_nav a { line-height: 24px; color: #3a3f4a; text-decoration: none; }
+.main_nav a:last-child { float: left !important; }
+.main_nav { padding: 7px 0 7px 20px; }
+.main_nav a:hover { color: #f74a4a; text-decoration: underline; }
+/*右*/
+.help_right {  padding-left: 0;}
+.help_sure { border: 1px solid #e6e9ef; background-color: white; padding: 30px 30px; }
+.sure_one { font-size: 16px; line-height: 20px; padding-bottom: 12px; border-bottom: 1px solid #e6e9ef;}
+.sure_two { background: url(../images/help_bg.png) no-repeat; width: 760px; height: 120px; margin: 16px 0; }
+.sure_two .dl_1 { padding: 25px 0 0 40px; }
+.sure_two .dl_2 { padding-left: 50px; padding-top: 7px; }
+.sure_two .dl_3 { padding: 10px 0 0 40px; }
+.sure_three {   padding: 15px;}
+.sure_three>div { text-indent:2em;}
+.sure_three img { max-width: 730px; padding: 10px; margin: 10px; border: 1px solid #e5e5e5; border-radius: 5px; }
+/*购买上*/
+.goods_text { font-size: 14px; line-height: 24px; }
+.goods_table { margin-top: 20px; }
+.goods_table tbody tr { border: #e5e5e5 1px solid; }
+.goods_one { text-align: center; font-size: 14px; font-weight: bold; line-height: 44px; }
+.goods_two td { padding: 10px; font-size: 12px; line-height: 24px; }
+.goods_two_img { width: 75%; border-radius: 5px; margin: 10px; }
+.cente_big { color: #3a3f4a; font: 12px/1.6em Microsoft YaHei, Tahoma, simsun; }
+.cente_box { background: #f3f4f6 url(../images/wrap_bg.png) no-repeat center 0; font: 12px/1.6em Microsoft YaHei, Tahoma, simsun; color: #3a3f4a; padding-bottom: 20px; }
+.cente_top { height: 40px; line-height: 40px;   margin: 10px;  padding: 0 1.5rem; }
+/*左*/
+.cente_left dd, .cente_left dl { margin: 0; padding: 0; }
+.cente_left { border: 1px solid #e6e9ef; background: #fff; margin: 0; padding: 0; }
+.cente_left dd { border-bottom: 1px solid #e6e9ef; }
+.cente_left dd a { display: block; height: 55px; line-height: 55px; font-size: 14px; border-left: 6px solid #fff; padding-left: 12px; color: #3a3f4a; }
+.cente_left dd a:hover { text-decoration: none; border-left-color: #f74a4a; color: #f74a4a; }
+.cente_left dd .current { color: #f74a4a; border-left-color: #f74a4a; }
+/*左边图标定位*/
+.cente_left dd i { float: left; width: 25px; height: 25px; margin: 14px 10px 0 0; }
+.i_sp { background: url(../images/icon1.png) no-repeat; }
+.i_coin_one { background-position: 0 -30px; }
+.cente_left a.current .i_coin_one, .cente_left a:hover .i_coin_one { background-position: 0 0px; }
+.i_coin_two { background-position: -30px -30px; }
+.cente_left a.current .i_coin_two, .cente_left a:hover .i_coin_two { background-position: 0 0px; }
+.i_coin_three { background-position: 0 -30px; }
+.cente_left a.current .i_coin_three, .cente_left a:hover .i_coin_three { background-position: 0 0px; }
+.i_coin_four { background-position: 0 -30px; }
+.cente_left a.current .i_coin_four, .cente_left a:hover .i_coin_four { background-position: 0 0px; }
+.i_coin_one { background-position: 0 -30px; }
+.cente_left a.current .i_coin_five, .cente_left a:hover .i_coin_five { background-position: 0 0px; }
+.i_coin_five { background-position: 0 -30px; }
+.cente_left a.current .i_coin_one, .cente_left a:hover .i_coin_one { background-position: 0 0px; }
+.i_coin_six { background-position: 0 -30px; }
+.cente_left a.current .i_coin_six, .cente_left a:hover .i_coin_six { background-position: 0 0px; }
+.i_coin_senve { background-position: 0 -30px; }
+.cente_left a.current .i_coin_senve, .cente_left a:hover .i_coin_senve { background-position: 0 0px; }
+.i_coin_eight { background-position: 0 -30px; }
+.cente_left a.current .i_coin_eight, .cente_left a:hover .i_coin_eight { background-position: 0 0px; }
+.i_coin_nine { background-position: 0 -30px; }
+.cente_left a.current .i_coin_nine, .cente_left a:hover .i_coin_nine { background-position: 0 0px; }
+.i_coin_ten { background-position: 0 -30px; }
+.cente_left a.current .i_coin_ten, .cente_left a:hover .i_coin_ten { background-position: 0 0px; }
+/*右*/
+/**/
+.center_info { padding: 15px 30px; margin-bottom: 10px; border: 1px solid #e6e9ef; background: #fff; }
+.notice { border: 1px solid #e6e9ef; padding: 10px 15px; width: 250px; }
+.notice a { display: block; color: #3a3f4a; text-decoration: none; }
+.notice a:hover { color: #f74a4a; text-decoration: underline; }
+.head_jpg img { width: 80px; height: 80px; display: block; border-radius: 40px; background: #ccc; }
+.cenerr_hao { margin-left: 30px; }
+.cenerr_hao p { margin: 0; }
+.cenerr_hao p strong { font: 800 16px/24px Microsoft Yahei; margin-right: 5px; }
+/*头像*/
+.sorry { background: #fff; width: 100%; padding: 50px 0; margin-bottom: 10px; }
+.sorry_mid { width: 540px; margin: 0 auto; }
+.sorry_img img { width: 100px; height: 100px; }
+.sorry_text { margin-left: 12px; }
+.sorry_text .tt { font-weight: 700; font-size: 14px; color: #333; padding-bottom: 10px; margin-top: 12px; }
+.sorry_text .ttt { margin-top: 10px; }
+/*无订单*/
+.love_box { border: 1px solid #e6e9ef; background: #fff; }
+.love_text { font-size: 14px; height: 36px; line-height: 36px; padding: 0 10px; border-bottom: 1px solid #e6e9ef; }
+.love_text .am-fl { font-weight: bold; }
+.love_text .am-fr a { font-size: 12px; }
+.love_text .am-fr a:hover { text-decoration: underline; }
+.love_l_one { padding: 30px 0; border-left: 1px solid #f3f4f6; text-align: center; }
+.love_l_one img { width: 90px; height: 90px; }
+.love_one_text { text-align: center; }
+.love_one_text strong { display: block; margin-top: 10px; }
+.love_money { color: red; }
+/*猜你喜欢*/
+.indent { border-bottom: 1px solid #e6e9ef; margin-bottom: 20px; }
+.myindent { width: 58px; font-size: 14px; font-weight: 800; border-bottom: 1px solid #f74a4a; padding-bottom: 10px; }
+.choice_box { padding: 10px 20px; line-height: 30px; border: 1px solid #e6e9ef; background: #fff; }
+.choice_t { border: 1px solid #e5e5e5; padding: 5px 15px; line-height: 20px; width: 150px; margin-right: 15px; position: relative; z-index: 20; }
+.choice_e { cursor: pointer; }
+.choice_one a { width: 90px; height: 25px; line-height: 26px; overflow: hidden; display: block; margin-top: 4px; display: inline-block; background: #f74a4a; color: #fff; border-bottom: 2px solid #e43333; text-align: center; cursor: pointer; margin-left: 20px; }
+.choice_one a:hover { color: #fff; text-decoration: none; background: #e43333; border-color: #ce2d2d; }
+/**/
+.threetable{
+  height: 46px;  border: 1px solid #e6e9ef; }
+.three_table .threetable{ background:none;}
+.three_table .threetable>.am-active a{ background:none;color: #3a3f4a;  border-bottom: 1px solid #f74a4a;}
+.three_table .threetable li a{font-size: 14px;
+  line-height: 44px;
+  text-align: center;
+  border-right: 1px solid #e6e9ef;}
+
+
+
